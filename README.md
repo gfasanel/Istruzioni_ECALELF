@@ -1,1 +1,43 @@
-# Istruzioni_ECALELF
+##Calibrazione al RUN2
+
+Ti fai la ricettina per fare il draw di nPV e ti fai gli istogrammi
+Poi, 
+
+```
+./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --saveRootMacro
+```
+e in tmp/ ti ritrovi dei trees da spostare in data/puTree/ per esempio li aggiungi al dat file 
+
+parti da un certo runRangeLimits.dat che serve a identificare i punti di interesse
+
+ti scrivi i tuoi punti di interesse con
+
+./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --runDivide --noPU (ti conviene passare da script)
+
+rm -r test/MC/allRange_DYJets_madgraph-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD.root_DYJets_amctnlo-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD.root/
+rm -r test/dato/miniAOD_November2015/
+
+./script/energyScale.sh --step=1 -f data/validation/miniAOD_November2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/monitoringRun2015-25ns-interval_50000.dat
+
+./script/energyScale.sh --step=1 -f data/validation/miniAOD_November2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/giuseppe-interval_100000.dat
+
+[INFO] What you did in step1 is:
+
+******************************************************************************
+	./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile data/regions/scaleStep1.dat  --runRangesFile data/runRanges/monitoringRun2015-25ns-interval_50000.dat  	     --updateOnly --fit_type_value=1 --selection=loose  --invMass_var invMass --commonCut Et_20-noPF 	    --outDirFitResMC=test/MC/allRange_DYJets_madgraph-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD_DYJets_amctnlo-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD/pufileData_tot/loose/invMass/fitres --outDirFitResData=test/dato/miniAOD_November2015/loose/invMass/fitres 	    --outDirImgMC=test/MC/allRange_DYJets_madgraph-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD_DYJets_amctnlo-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD/pufileData_tot/loose/invMass/img    --outDirImgData=test/dato/miniAOD_November2015/loose/invMass/img 	    > test/dato/miniAOD_November2015/loose/invMass/log/step1-invMass-loose-Et_20-noPF-HggRunEta.log || exit 1
+	
+	./script/makeTable.sh --regionsFile data/regions/scaleStep1.dat  --runRangesFile data/runRanges/monitoringRun2015-25ns-interval_50000.dat --commonCut Et_20-noPF 	    --outDirFitResMC=test/MC/allRange_DYJets_madgraph-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD_DYJets_amctnlo-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD/pufileData_tot/loose/invMass/fitres --outDirFitResData=test/dato/miniAOD_November2015/loose/invMass/fitres 	    >  test/dato/miniAOD_November2015/loose/invMass/table/step1-invMass-loose-Et_20-noPF-HggRunEta.tex
+	
+	./script/tex2txt.sh test/dato/miniAOD_November2015/loose/invMass/table/step1-invMass-loose-Et_20-noPF-HggRunEta.tex | awk -F t -f awk/recalibOutput.awk |grep -v '^%' > test/dato/miniAOD_November2015/loose/invMass/table/step1-invMass-loose-Et_20-noPF-HggRunEta.dat
+	
+	#save root files with step1 corrections
+	./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile data/regions/scaleStep1.dat   	    --saveRootMacro --corrEleType HggRunEta 	    --corrEleFile test/dato/miniAOD_November2015/loose/invMass/table/step1-invMass-loose-Et_20-noPF-HggRunEta.dat || exit 1
+	
+	mv tmp/scaleEle_HggRunEta_[s,d][1-9]-miniAOD_November2015.root test/dato/miniAOD_November2015/loose/invMass/step1/
+******************************************************************************
+
+
+./bin/ZFitter.exe -f ~gfasanel/public/4shervin/miniAOD_November2015.dat --regionsFile data/regions/scaleStep1.dat   	    --saveRootMacro --corrEleType HggRunEta 	    --corrEleFile ~gfasanel/public/4shervin/step1-invMass-loose-Et_20-noPF-HggRunEta.dat 
+
+
+
