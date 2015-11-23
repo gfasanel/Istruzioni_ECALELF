@@ -1,6 +1,7 @@
 ##Calibrazione al RUN2
 
 Ti fai la ricettina per fare il draw di nPV e ti fai gli istogrammi
+e metti pileupHist, pileupHist per data e MC
 Poi, 
 
 ```
@@ -8,6 +9,9 @@ Poi,
 ```
 e in tmp/ ti ritrovi dei trees da spostare in data/puTree/ per esempio li aggiungi al dat file 
 
+lascia pileupHist per i dati e per il MC metti il root file
+
+2)
 parti da un certo runRangeLimits.dat che serve a identificare i punti di interesse
 
 ti scrivi i tuoi punti di interesse con
