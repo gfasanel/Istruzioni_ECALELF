@@ -48,3 +48,4 @@ rm -r test/dato/miniAOD_November2015/
 Che chi sa cosa fa (dopo aver scritto una latex table)
 ./script/stability.sh -t  test/dato/miniAOD_November2015/loose/invMass_SC_corr/table/step1_stability-invMass_SC_corr-loose.tex --outDirImgData test/dato/miniAOD_November2015/loose/invMass_SC_corr/step1/img/stability// -x runNumber -y peak --allRegions
 
+./script/stability.sh -t  test/dato/miniAOD_November2015/loose/invMass_SC_corr/table/step1-invMass_SC_corr-loose-Et_20-noPF-HggRunEta.tex -invMass_SC_corr-loose.tex --outDirImgData test/dato/miniAOD_November2015/loose/invMass_SC_corr/step1/img/stability// -x runNumber -y peak --allRegions
