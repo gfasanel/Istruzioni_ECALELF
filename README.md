@@ -43,5 +43,8 @@ rm -r test/dato/miniAOD_November2015/
 
 ./bin/ZFitter.exe -f ~gfasanel/public/4shervin/miniAOD_November2015.dat --regionsFile data/regions/scaleStep1.dat   	    --saveRootMacro --corrEleType HggRunEta 	    --corrEleFile ~gfasanel/public/4shervin/step1-invMass-loose-Et_20-noPF-HggRunEta.dat 
 
+./script/energyScale.sh --step=1stability -f data/validation/miniAOD_November2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/giuseppe-interval_100000.dat
 
+Che chi sa cosa fa (dopo aver scritto una latex table)
+./script/stability.sh -t  test/dato/miniAOD_November2015/loose/invMass_SC_corr/table/step1_stability-invMass_SC_corr-loose.tex --outDirImgData test/dato/miniAOD_November2015/loose/invMass_SC_corr/step1/img/stability// -x runNumber -y peak --allRegions
 
