@@ -39,8 +39,15 @@ rm -r test/dato/miniAOD_November2015/
 	
 	mv tmp/scaleEle_HggRunEta_[s,d][1-9]-miniAOD_November2015.root test/dato/miniAOD_November2015/loose/invMass/step1/
 ******************************************************************************
+Il MC dello step 1 viene salvato qui:
+```
+test/MC/allRange_DYJets_madgraph-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD_DYJets_amctnlo-RunIISpring15MiniAODv2-Asym25ns-miniAOD-allRange-miniAOD/pufileData_tot/loose/invMass_SC_corr/img/
+```
 
-
+I dati fittati con la coda del MC vengono salvati qui:
+```
+test/dato/miniAOD_November2015/loose/invMass_SC_corr/img/
+```
 ./bin/ZFitter.exe -f ~gfasanel/public/4shervin/miniAOD_November2015.dat --regionsFile data/regions/scaleStep1.dat   	    --saveRootMacro --corrEleType HggRunEta 	    --corrEleFile ~gfasanel/public/4shervin/step1-invMass-loose-Et_20-noPF-HggRunEta.dat 
 
 ./script/energyScale.sh --step=1stability -f data/validation/miniAOD_November2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/giuseppe-interval_100000.dat
