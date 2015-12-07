@@ -22,7 +22,14 @@ cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=file:$file maxEvents=1000
  
 * Se in locale funziona, ti puoi preparare a sottomettere su crab (crab2 NON crab3):
 * 1) Devi scrivere in alcareco_datasets.dat il dataset sul quale vuoi girare
-* Per sottomettere su crab2 (NON crab3), ho modificato scripts/prodNtuples.sh in modo che:
+```
+256584-258158 /DoubleEG/emanuele-ZElectron_Run2015D_v3_74X_dataRun2_Candidate_2015_12_04_11_16_06-5f619c1c848e615f4f8041df1ac5e2bd/USER DoubleEG-emanuele-ZElectron_Run2015D_v3_74X caf database VALID RUN2015D
+```
+* 2) prova che parseDataFile capisca il file giusto da prendere
+```
+parseDatasetFile.sh alcareco_datasets.dat | grep emanuele-ZElectron_Run2015D_v3
+```
+* Ho modificato scripts/prodNtuples.sh in modo che:
 * 1) use_dbs3 =1
 * 2) lumis_per_job=12000 -> era troppo (job killed due to cpu limit usage reached)
 * 3) non riesce a copiare l'output su eos. Sono riuscito a farlo scrivere su una mia cartella su /afs
@@ -31,10 +38,9 @@ cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=file:$file maxEvents=1000
 https://github.com/GiuseppeFasanella/ECALELF/blob/miniAOD/EcalAlCaRecoProducers/tmp/ntuple_data.cfg
 ```
 ##DATI
-cd /afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/EcalAlCaRecoProducers
 source ../initCmsEnvCRAB2.sh
 # --skim ZSkim
-./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep miniAOD| grep DoubleEG` --type MINIAOD -t config/reRecoTags/phiSym_materialCorrection_ref.py --scheduler=lsf --createOnly
+./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep emanuele-ZElectron_Run2015D_v3` --type MINIAOD -t config/reRecoTags/phiSym_materialCorrection_ref.py --scheduler=lsf --createOnly
 crab -c prod_ntuples/MINIAODNTUPLE/DoubleEG-ZSkim-Run2015B-PromptReco-v1-miniAOD_test/251022-251883/ -submit 1
 ```
 
