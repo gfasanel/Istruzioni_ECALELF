@@ -1,4 +1,5 @@
-da Calibration/EcalAlcarecoProducers/ (qualcosa del genere)
+* da Calibration/EcalAlcarecoProducers/
+* Per ora il branch giusto sembra essere `miniAOD_merged`: nel senso che filla correttamente l'eleID dei dati, ma non l'eleID del MC
 
 * Girare in locale (funziona)
 ```
