@@ -25,14 +25,14 @@ echo "s2 pileup friends/pu/mc/mcPUtrees2.root" >> data/validation/${file}.dat
 ```
 ```
 mv tmp/smearerCat_${region1}* friends/smearerCat/ 
-echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}s1-${file}.root" >> data/validation/${file}.dat 
-echo "s2 smearerCat${region1} friends/smearerCat/smearerCat_${region1}s2-${file}.root" >> data/validation/${file}.dat 
-echo "d1 smearerCat${region1} friends/smearerCat/smearerCat_${region1}d1-${file}.root" >> data/validation/${file}.dat 
-echo "d2 smearerCat${region1} friends/smearerCat/smearerCat_${region1}d2-${file}.root" >> data/validation/${file}.dat 
+echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s1-${file}.root" >> data/validation/${file}.dat 
+echo "s2 smearerCat${region1} friends/smearerCat/smearerCat_${region1}_s2-${file}.root" >> data/validation/${file}.dat 
+echo "d1 smearerCat${region1} friends/smearerCat/smearerCat_${region1}_d1-${file}.root" >> data/validation/${file}.dat 
+echo "d2 smearerCat${region1} friends/smearerCat/smearerCat_${region1}_d2-${file}.root" >> data/validation/${file}.dat 
 echo "d3 smearerCat${region1} friends/smearerCat/smearerCat_${region1}_d3-${file}.root" >> data/validation/${file}.dat
 ```
 
-region2=scaleStep2smearing_2 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep2smearing_2.dat --addBranch=smearerCat invMass_var=invMass_SC_corr --saveRootMacro mv tmp/smearerCat_${region2}* friends/smearerCat/ echo "s1 smearerCat_${region2} friends/smearerCat/smearerCat_${region1}s1-${file}.root" >> data/validation/${file}.dat echo "s2 smearerCat${region2} friends/smearerCat/smearerCat_${region1}s2-${file}.root" >> data/validation/${file}.dat echo "d1 smearerCat${region2} friends/smearerCat/smearerCat_${region1}d1-${file}.root" >> data/validation/${file}.dat echo "d2 smearerCat${region2} friends/smearerCat/smearerCat_${region1}d2-${file}.root" >> data/validation/${file}.dat echo "d3 smearerCat${region2} friends/smearerCat/smearerCat_${region1}_d3-${file}.root" >> data/validation/${file}.dat
+region2=scaleStep2smearing_2 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep2smearing_2.dat --addBranch=smearerCat invMass_var=invMass_SC_corr --saveRootMacro mv tmp/smearerCat_${region2}* friends/smearerCat/ echo "s1 smearerCat_${region2} friends/smearerCat/smearerCat_${region1}_s1-${file}.root" >> data/validation/${file}.dat echo "s2 smearerCat${region2} friends/smearerCat/smearerCat_${region1}_s2-${file}.root" >> data/validation/${file}.dat echo "d1 smearerCat${region2} friends/smearerCat/smearerCat_${region1}_d1-${file}.root" >> data/validation/${file}.dat echo "d2 smearerCat${region2} friends/smearerCat/smearerCat_${region1}_d2-${file}.root" >> data/validation/${file}.dat echo "d3 smearerCat${region2} friends/smearerCat/smearerCat_${region1}_d3-${file}.root" >> data/validation/${file}.dat
 
 controlla che sia tutto a posto nel file: emacs data/validation/${file}.dat
 
