@@ -39,8 +39,7 @@ https://github.com/GiuseppeFasanella/ECALELF/blob/miniAOD/EcalAlCaRecoProducers/
 ```
 ##DATI
 source ../initCmsEnvCRAB2.sh
-# --skim ZSkim
-./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep emanuele-ZElectron_Run2015D_v3` --type MINIAOD -t config/reRecoTags/phiSym_materialCorrection_ref.py --scheduler=lsf --createOnly
+./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep emanuele-ZElectron_Run2015D_v3` --skim ZSkim --type MINIAOD -t config/reRecoTags/phiSym_materialCorrection_ref.py --scheduler=lsf --createOnly
 crab -c prod_ntuples/MINIAODNTUPLE/DoubleEG-ZSkim-Run2015B-PromptReco-v1-miniAOD_test/251022-251883/ -submit 1
 ```
 
