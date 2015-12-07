@@ -20,6 +20,8 @@ file="root://xrootd.unl.edu//store/mc/RunIISpring15MiniAODv2/ZToEE_NNPDF30_13TeV
 cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=file:$file maxEvents=1000 isCrab=0 tagFile=config/reRecoTags/phiSym_materialCorrection_ref.py
 ```
  
+* Se in locale funziona, ti puoi preparare a sottomettere su crab (crab2 NON crab3):
+* 1) Devi scrivere in alcareco_datasets.dat il dataset sul quale vuoi girare
 * Per sottomettere su crab2 (NON crab3), ho modificato scripts/prodNtuples.sh in modo che:
 * 1) use_dbs3 =1
 * 2) lumis_per_job=12000 -> era troppo (job killed due to cpu limit usage reached)
