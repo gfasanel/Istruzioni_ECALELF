@@ -1,7 +1,7 @@
 * da Calibration/EcalAlcarecoProducers/
 * Per ora il branch giusto sembra essere `miniAOD_merged`: nel senso che filla correttamente l'eleID dei dati, ma non l'eleID del MC
 
-* Girare in locale (funziona)
+* Girare in locale, prima di sottomettere jobs
 ```
 ##DATI
 file="root://eoscms//eos/cms/store/data/Run2015D/DoubleEG/MINIAOD/PromptReco-v4/000/259/862/00000/389D079E-EA7B-E511-9506-02163E0141D8.root"
