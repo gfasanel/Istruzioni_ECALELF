@@ -9,7 +9,8 @@ Fai i pileupHist, con un draw secco di nPV per dati e MC
 Il dat iniziale ha la lista dei dati, la lista dei MC e i pileUPHist
 
 ```
-file=miniAOD_November2015_Cal_Nov2015_ICcomb_v4 
+#file=miniAOD_November2015_Cal_Nov2015_ICcomb_v4 
+file=Rereco_emanuele
 region1=scaleStep2smearing_1 
 region2=scaleStep2smearing_2 
 ./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --addBranch=smearerCat invMass_var=invMass_SC_corr --saveRootMacro
@@ -32,13 +33,14 @@ echo "d2 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d2-${fil
 echo "d3 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d3-${file}.root" >> data/validation/${file}.dat
 ```
 
-La stessa cosa con region2
+* La stessa cosa con region2
 
-controlla che sia tutto a posto nel file: emacs data/validation/${file}.dat
+* Controlla che sia tutto a posto nel file: emacs data/validation/${file}.dat
 
-Lancia un profile, prima di lanciare i job
-
+* Lancia un profile, prima di lanciare i job
+```
 ./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --invMass_var=invMass_SC_corr --commonCut=Et_20-noPF --autoBin --smearerFit --plotOnly --profileOnly
+```
 
 source cleaner_step2.sh (non mi piace molto) ./submit_step2.sh ./submit_step2_corr.sh
 
