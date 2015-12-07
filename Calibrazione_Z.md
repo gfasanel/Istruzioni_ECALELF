@@ -1,10 +1,6 @@
 ### Calibrazione alla Z
 
 * Scriviti un dat file che contenga dati e MC(vedi file_partenza.dat)
-* Fai un test velocissimo per vedere che le ntuple non sono folli
-```
-
-```
 * Ti fai gli istogrammi del pileup per dati e MC
 * Categorizza e crea i tree del pileup
 
@@ -12,8 +8,14 @@ Fai i pileupHist, con un draw secco di nPV per dati e MC
 
 Il dat iniziale ha la lista dei dati, la lista dei MC e i pileUPHist
 
-file=miniAOD_November2015_Cal_Nov2015_ICcomb_v4 region1=scaleStep2smearing_1 region2=scaleStep2smearing_2 ./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --addBranch=smearerCat invMass_var=invMass_SC_corr --saveRootMacro
+```
+file=miniAOD_November2015_Cal_Nov2015_ICcomb_v4 
+region1=scaleStep2smearing_1 
+region2=scaleStep2smearing_2 
+./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --addBranch=smearerCat invMass_var=invMass_SC_corr --saveRootMacro
+```
 
+* Controlla la categorizzazione
 mv tmp/mcPUtrees1.root friends/pu/mc/ mv tmp/mcPUtrees2.root friends/pu/mc/ echo "s1 pileup friends/pu/mc/mcPUtrees1.root" >> data/validation/${file}.dat echo "s2 pileup friends/pu/mc/mcPUtrees2.root" >> data/validation/${file}.dat
 
 mv tmp/smearerCat_${region1}* friends/smearerCat/ echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}s1-${file}.root" >> data/validation/${file}.dat echo "s2 smearerCat${region1} friends/smearerCat/smearerCat_${region1}s2-${file}.root" >> data/validation/${file}.dat echo "d1 smearerCat${region1} friends/smearerCat/smearerCat_${region1}d1-${file}.root" >> data/validation/${file}.dat echo "d2 smearerCat${region1} friends/smearerCat/smearerCat_${region1}d2-${file}.root" >> data/validation/${file}.dat echo "d3 smearerCat${region1} friends/smearerCat/smearerCat_${region1}_d3-${file}.root" >> data/validation/${file}.dat
