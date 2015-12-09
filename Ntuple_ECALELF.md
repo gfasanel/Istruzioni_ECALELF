@@ -45,7 +45,8 @@ json=/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/Cert
 jsonName=246908-260627-Prompt_25ns-v1-golden_silver
 tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 ./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep emanuele-ZElectron_Run2015D_v3` --skim ZSkim --type MINIAOD -t ${tag} --scheduler=${where} --json=${json} --json_name=${jsonName} --createOnly
-crab -c prod_ntuples/MINIAODNTUPLE/DoubleEG-ZSkim-Run2015B-PromptReco-v1-miniAOD_test/251022-251883/ -submit 1
+#sottometti un job di prova
+ crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -submit 1
 ```
 
 * Tecnicamente funziona ma non riesce a copiare l'output su eos.
