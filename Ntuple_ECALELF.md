@@ -59,6 +59,8 @@ tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 
 ```
 ##MC
+#where=lsf
+where=remoteGlidein
 tagMC=config/reRecoTags/74X_mcRun2_asymptotic_v2.py
-./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep withPho | head -n 1` --isMC --type MINIAOD --scheduler=remoteGlidein tagFile=${tagMC} --createOnly
+./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep withPho | head -n 1` --isMC --type MINIAOD --scheduler=${where} tagFile=${tagMC} --createOnly
 ```
