@@ -1,6 +1,5 @@
 * da Calibration/EcalAlcarecoProducers/
-* Per ora il branch giusto sembra essere `miniAOD_merged`: nel senso che filla correttamente l'eleID dei dati, ma non l'eleID del MC
-
+* Per ora il branch giusto e' `mergeattempt` da Photon_regression
 * Girare in locale, prima di sottomettere jobs
 ```
 ##DATI
@@ -47,6 +46,7 @@ tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 ./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep emanuele-ZElectron_Run2015D_v3` --skim ZSkim --type MINIAOD -t ${tag} --scheduler=${where} --json=${json} --json_name=${jsonName} --createOnly
 #sottometti un job di prova
  crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -submit 1
+ crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -status
 ```
 
 * Tecnicamente funziona ma non riesce a copiare l'output su eos.
