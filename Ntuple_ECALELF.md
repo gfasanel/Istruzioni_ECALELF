@@ -63,4 +63,5 @@ tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 where=remoteGlidein
 tagMC=config/reRecoTags/74X_mcRun2_asymptotic_v2.py
 ./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep withPho | head -n 1` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --createOnly
+crab -c prod_ntuples/MINIAODNTUPLE/DYJets_amctnlo-RunIISpring15MiniAODv2-Asym25ns-miniAOD-withPho/allRange/ -submit 1
 ```
