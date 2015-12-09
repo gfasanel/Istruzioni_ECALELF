@@ -21,6 +21,10 @@ cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=file:$file maxEvents=1000
 ```
 
 ###Sottomettere su CRAB 2 (su CRAB3 non sono riuscito)
+
+```
+source ../initCmsEnvCRAB2.sh
+```
  
 * 1) Devi scrivere in alcareco_datasets.dat il dataset sul quale vuoi girare
 ```
