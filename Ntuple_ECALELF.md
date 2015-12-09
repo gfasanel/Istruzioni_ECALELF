@@ -19,8 +19,9 @@ tagMC=config/reRecoTags/74X_mcRun2_asymptotic_v2.py
 file="root://xrootd.unl.edu//store/mc/RunIISpring15MiniAODv2/ZToEE_NNPDF30_13TeV-powheg_M_50_120/MINIAODSIM/74X_mcRun2_asymptotic_v2-v1/10000/005C8B52-D973-E511-B557-38EAA78D8F98.root"
 cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=file:$file maxEvents=1000 isCrab=0 tagFile=${tagMC} MC=1
 ```
+
+###Sottomettere su CRAB 2 (su CRAB3 non sono riuscito)
  
-* Se in locale funziona, ti puoi preparare a sottomettere su crab (crab2 NON crab3):
 * 1) Devi scrivere in alcareco_datasets.dat il dataset sul quale vuoi girare
 ```
 256584-258158 /DoubleEG/emanuele-ZElectron_Run2015D_v3_74X_dataRun2_Candidate_2015_12_04_11_16_06-5f619c1c848e615f4f8041df1ac5e2bd/USER DoubleEG-emanuele-ZElectron_Run2015D_v3_74X caf database VALID RUN2015D
@@ -49,6 +50,8 @@ tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 #sottometti un job di prova
  crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -submit 1
  crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -status
+ 
+ ./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep emanuele-ZElectron_Run2015D_v4` --type MINIAOD -t ${tag} --scheduler=${where} --json=${json} --json_name=${jsonName}
  
  ##Se un job fallisce o ha finito, prenditi l'output
  #getoutput
