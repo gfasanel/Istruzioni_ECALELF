@@ -59,5 +59,6 @@ tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 
 ```
 ##MC
-./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep miniAODSIM_test` --isMC --type MINIAOD -t config/reRecoTags/phiSym_materialCorrection_ref.py --scheduler=remoteGlidein --createOnly
+tagMC=config/reRecoTags/74X_mcRun2_asymptotic_v2.py
+./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep miniAODSIM_test` --isMC --type MINIAOD --scheduler=remoteGlidein tagFile=${tagMC} --createOnly
 ```
