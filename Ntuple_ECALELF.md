@@ -54,45 +54,14 @@ tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
  crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -submit 1
  crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -status
  
- ##Se un job fallisce
+ ##Se un job fallisce o ha finito, prenditi l'output
  #getoutput
  crab -c prod_ntuples/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-emanuele-ZElectron_Run2015D_v3_74X/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/ -status -getoutput
  # E controlla il res
  /res/
 ```
 
-* Tecnicamente funziona ma non riesce a copiare l'output su eos.
-* Quando creo il job mi dice
-```
-crab:  output files will be staged at caf.cern.ch
-       with LFN's starting with = group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/DoubleEG-ZSkim-Run2015B-PromptReco-v1-miniAOD/251022-251883/unmerged/
-endpoint =  root://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/DoubleEG-ZSkim-Run2015B-PromptReco-v1-miniAOD/251022-251883/unmerged/
-crab:  Checking remote location
-crab:  WARNING: Problems trying remote dir check: 
-	Failure while checking remote dir: list assignment index out of range
-WARNING: Stage out of output files may fail
-crab:  Creating 29 jobs, please wait...
-crab:  Total of 29 jobs created.
-```
-
-* dirottando l'output su una mia cartella locale, funziona tutto
-
-
 ```
 ##MC
 ./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep miniAODSIM_test` --isMC --type MINIAOD -t config/reRecoTags/phiSym_materialCorrection_ref.py --scheduler=remoteGlidein --createOnly
 ```
-
-* Tranne che non riesco a scrivere nemmeno su una cartella locale (penso che quel remoteGlidein lo confonda)
-
-```
-crab:  output files will be staged at caf.cern.ch
-       with LFN's starting with = /afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/EcalAlCaRecoProducers/Test_miniAOD_SIM/
-crab:  Checking remote location
-crab:  WARNING: Problems trying remote dir check: 
-	Failure while checking remote dir: 'Error checking []'
-WARNING: Stage out of output files may fail
-crab:  Creating 3 jobs, please wait...
-crab:  Total of 3 jobs created.
-```
-
