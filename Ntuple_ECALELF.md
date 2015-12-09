@@ -60,5 +60,5 @@ tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 ```
 ##MC
 tagMC=config/reRecoTags/74X_mcRun2_asymptotic_v2.py
-./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep miniAODSIM_test` --isMC --type MINIAOD --scheduler=remoteGlidein tagFile=${tagMC} --createOnly
+./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep withPho` --isMC --type MINIAOD --scheduler=remoteGlidein tagFile=${tagMC} --createOnly
 ```
