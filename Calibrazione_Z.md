@@ -8,6 +8,7 @@
 ```
 #file=miniAOD_November2015_Cal_Nov2015_ICcomb_v4 
 file=Rereco_emanuele
+file=miniAOD_November2015_withPho
 region1=scaleStep2smearing_1 
 region2=scaleStep2smearing_2 
 ./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --addBranch=smearerCat invMass_var=invMass_SC_corr --saveRootMacro
