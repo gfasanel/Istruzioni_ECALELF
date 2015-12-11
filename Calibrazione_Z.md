@@ -39,19 +39,21 @@ echo "s2 pileup data/puTree/s2_${file}.root" >> data/validation/${file}.dat
 * Controlla la categorizzazione. L'indice di categoria e' data da smearerCat[0]
 ```
 ./script/hadder.sh
-root -l tmp/d
+root -l tmp/d_chain.root macro/load_singleFile.C
+data->Draw("etaEle[0]","smearerCat[0]==0")
 ```
-* Sposta i file da tmp altrimenti li perdi e aggiungili al dat file
+* Sposta i file di categoria da tmp altrimenti li perdi e aggiungili al dat file
 ```
 mv tmp/smearerCat_${region1}* friends/smearerCat/ 
 echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s1-${file}.root" >> data/validation/${file}.dat 
 echo "s2 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s2-${file}.root" >> data/validation/${file}.dat 
 echo "d1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d1-${file}.root" >> data/validation/${file}.dat 
 echo "d2 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d2-${file}.root" >> data/validation/${file}.dat 
-echo "d3 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d3-${file}.root" >> data/validation/${file}.dat
+echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_s1-${file}.root" >> data/validation/${file}.dat 
+echo "s2 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_s2-${file}.root" >> data/validation/${file}.dat 
+echo "d1 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_d1-${file}.root" >> data/validation/${file}.dat 
+echo "d2 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_d2-${file}.root" >> data/validation/${file}.dat
 ```
-
-* La stessa cosa con region2
 
 * Controlla che sia tutto a posto nel file: emacs data/validation/${file}.dat
 
