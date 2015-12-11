@@ -13,6 +13,7 @@ region1=scaleStep2smearing_1
 region2=scaleStep2smearing_2 
 invMass_type=invMass_SC_corr
 ./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --addBranch=smearerCat invMass_var=${invMass_type} --saveRootMacro
+./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region2}.dat --addBranch=smearerCat invMass_var=${invMass_type} --saveRootMacro
 ```
 
 Se sta leggendo i pileupHist 
