@@ -58,6 +58,7 @@ echo "d2 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_d2-${fil
 
 * Controlla che sia tutto a posto nel file: emacs data/validation/${file}.dat
 
+###Da qui in poi dipende dalla massa prescelta
 * Lancia un profile, prima di lanciare i job, nel caso passa un initFile di imbeccata
 ```
 ./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit --plotOnly --profileOnly
