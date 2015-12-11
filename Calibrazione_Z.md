@@ -50,10 +50,10 @@ echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s1-${fil
 echo "s2 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s2-${file}.root" >> data/validation/${file}.dat 
 echo "d1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d1-${file}.root" >> data/validation/${file}.dat 
 echo "d2 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d2-${file}.root" >> data/validation/${file}.dat 
-echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_s1-${file}.root" >> data/validation/${file}.dat 
-echo "s2 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_s2-${file}.root" >> data/validation/${file}.dat 
-echo "d1 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_d1-${file}.root" >> data/validation/${file}.dat 
-echo "d2 smearerCat_${region1} friends/smearerCat/smearerCat_${region2}_d2-${file}.root" >> data/validation/${file}.dat
+echo "s1 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_s1-${file}.root" >> data/validation/${file}.dat 
+echo "s2 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_s2-${file}.root" >> data/validation/${file}.dat 
+echo "d1 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_d1-${file}.root" >> data/validation/${file}.dat 
+echo "d2 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_d2-${file}.root" >> data/validation/${file}.dat
 ```
 
 * Controlla che sia tutto a posto nel file: emacs data/validation/${file}.dat
