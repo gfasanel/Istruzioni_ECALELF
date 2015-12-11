@@ -11,17 +11,31 @@ file=Rereco_emanuele
 file=miniAOD_November2015_withPho
 region1=scaleStep2smearing_1 
 region2=scaleStep2smearing_2 
-./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --addBranch=smearerCat invMass_var=invMass_SC_corr --saveRootMacro
+invMass_type=invMass_SC_corr
+./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --addBranch=smearerCat invMass_var=${invMass_type} --saveRootMacro
 ```
 
-* Controlla la categorizzazione 
+Se sta leggendo i pileupHist 
+
+```
+********* runMin = 0	pufileMC_tot.root
+[STATUS] Reading PU histograms from files: /afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/pufileMC_tot.root	/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/pufileData_tot.root
+```
+Se sta categorizzando
+
+```
+[STATUS] Get smearerCat for tree: d1	with 7115179 entries
+```
+Sposta i file del pileup
+```
+mv tmp/mcPUtrees1.root  data/puTree/s1_${file}.root
+mv tmp/mcPUtrees2.root  data/puTree/s2_${file}.root
+echo "s1 pileup data/puTree/s1_${file}.root" >> data/validation/${file}.dat 
+echo "s2 pileup data/puTree/s2_${file}.root" >> data/validation/${file}.dat
+```
+
+* Controlla la categorizzazione. L'indice di categoria e' data da smearerCat[0]
 * Sposta i file da tmp altrimenti li perdi e aggiungili al dat file
-```
-mv tmp/mcPUtrees1.root friends/pu/mc/ 
-mv tmp/mcPUtrees2.root friends/pu/mc/ 
-echo "s1 pileup friends/pu/mc/mcPUtrees1.root" >> data/validation/${file}.dat 
-echo "s2 pileup friends/pu/mc/mcPUtrees2.root" >> data/validation/${file}.dat
-```
 ```
 mv tmp/smearerCat_${region1}* friends/smearerCat/ 
 echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s1-${file}.root" >> data/validation/${file}.dat 
