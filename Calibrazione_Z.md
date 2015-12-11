@@ -44,7 +44,8 @@ data->Draw("etaEle[0]","smearerCat[0]==0")
 ```
 * Sposta i file di categoria da tmp altrimenti li perdi e aggiungili al dat file
 ```
-mv tmp/smearerCat_${region1}* friends/smearerCat/ 
+mv tmp/smearerCat_${region1}_${file}* friends/smearerCat/ 
+mv tmp/smearerCat_${region2}_${file}* friends/smearerCat/ 
 echo "s1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s1-${file}.root" >> data/validation/${file}.dat 
 echo "s2 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_s2-${file}.root" >> data/validation/${file}.dat 
 echo "d1 smearerCat_${region1} friends/smearerCat/smearerCat_${region1}_d1-${file}.root" >> data/validation/${file}.dat 
