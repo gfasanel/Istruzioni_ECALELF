@@ -37,6 +37,10 @@ echo "s2 pileup data/puTree/s2_${file}.root" >> data/validation/${file}.dat
 ```
 
 * Controlla la categorizzazione. L'indice di categoria e' data da smearerCat[0]
+```
+./script/hadder.sh
+root -l tmp/d
+```
 * Sposta i file da tmp altrimenti li perdi e aggiungili al dat file
 ```
 mv tmp/smearerCat_${region1}* friends/smearerCat/ 
