@@ -1,6 +1,6 @@
 ### Calibrazione alla Z
 
-* Scriviti un dat file che contenga dati e MC(vedi file_partenza.dat)
+* Scriviti un dat file che contenga dati e MC (vedi https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/File_partenza.dat)
 * Ti fai gli istogrammi del pileup per dati e MC
 * Categorizza e crea i tree del pileup
 
