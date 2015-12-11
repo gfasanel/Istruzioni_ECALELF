@@ -1,0 +1,17 @@
+#promptReco RUND with PhotonEnergy
+#golden + silver json
+d1     selected    root://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-ZSkim-Run2015D-Prompt-v3-25ns\
+Reco-MINIAOD-Pho/256584-258158/246908-260627-Prompt_25ns-v1-golden_silver/merged.root
+d2     selected    root://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-ZSkim-Run2015D-Prompt-v4-25ns\
+Reco-MINIAOD-Pho/258159-260737/246908-260627-Prompt_25ns-v1-golden_silver/merged.root
+
+s1     selected             root:://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_mcRun2_asymptotic_v2/DYJets_amctnlo-RunIISpring\
+15MiniAODv2-Asym25ns-miniAOD-withPho/allRange/merged.root
+s2     selected             root:://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_mcRun2_asymptotic_v2/DYJets_madgraph-RunIISprin\
+g15MiniAODv2-Asym25ns-miniAOD-withPho/allRange/merged.root
+
+#d      pileupHist       /afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/pufileData_tot.root
+#s      pileupHist       /afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/pufileMC_tot.root
+
+s1 pileup data/puTree/s1_miniAOD_November2015_withPho.root
+s2 pileup data/puTree/s2_miniAOD_November2015_withPho.root
