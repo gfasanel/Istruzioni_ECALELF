@@ -1,12 +1,9 @@
 ### Calibrazione alla Z
 
 * Scriviti un dat file che contenga dati e MC (vedi https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/File_partenza.dat)
-* Ti fai gli istogrammi del pileup per dati e MC
-* Categorizza e crea i tree del pileup
-
-Fai i pileupHist, con un draw secco di nPV per dati e MC
-
-Il dat iniziale ha la lista dei dati, la lista dei MC e i pileUPHist
+* Ti fai gli istogrammi del pileup per dati e MC con puMaker.C e puHadder.C (dal branch miniAOD) {Fai i pileupHist, con un draw secco di nPV per dati e MC}
+* Aggiungi al dat iniziale ha la lista dei dati, la lista dei MC e i pileUPHist
+* Crea i tree del pileup e allo stesso tempo categorizza tramite ZFitter (vedi sotto)
 
 ```
 #file=miniAOD_November2015_Cal_Nov2015_ICcomb_v4 
