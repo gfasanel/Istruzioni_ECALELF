@@ -8,7 +8,7 @@ script/pileup_histoMaker.sh $file
 #Ti fai gli istogrammi del pileup per dati e MC con macro/puMaker.C {Fai i pileupHist, con un draw secco di nPV per dati e MC}
 #Aggiungi al dat iniziale ha la lista dei dati, la lista dei MC e i pileUPHist
 ```
-* Crea i tree del pileup e allo stesso tempo categorizza tramite ZFitter
+* Crea i tree del pileup con cui ripesi il MC (a partire ovviamente dagli istogrammi del pileup creati al passo prima) e allo stesso tempo categorizza tramite ZFitter
 
 ```
 ##CATEGORIZZAZIONE E PILEUP TREE (LE 8 CATEGORIE ETA-R9 SONO INDIPENDENTI DALLA MASSA)
