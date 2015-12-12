@@ -61,10 +61,9 @@ echo "d2 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_d2-${fil
 ###Da qui in poi dipende dalla massa prescelta
 * Lancia una minimizzazione di prova, prima di lanciare i job, nel caso passa un initFile di imbeccata
 ```
-#--initFile=step2/init_1.txt
-./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit 
+./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --invMass_var=${invMass_type}  --commonCut=Et_20-noPF --autoBin --smearerFit --initFile=step2/init_1.txt
 #--plotOnly --profileOnly 
-./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region2}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit  
+./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region2}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit  --initFile=step2/init_2.txt
 #--plotOnly --profileOnly
 ```
 
