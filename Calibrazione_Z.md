@@ -65,9 +65,11 @@ echo "d2 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_d2-${fil
 #--plotOnly --profileOnly 
 ./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region2}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit  --initFile=step2/init_2.txt
 #--plotOnly --profileOnly
-root -l test/dato/fitres/outProfile-${region1}-Et_20-noPF.root
-root -l test/dato/fitres/outProfile-${region2}-Et_20-noPF.root
-
+./script/fit.sh test/dato/fitres/outProfile-${region1}-Et_20-noPF.root
+./script/fit.sh test/dato/fitres/outProfile-${region2}-Et_20-noPF.root
+Likelihood_plot_dir=~/scratch1/www/Validation_ntuple_Paolo
+mv test/dato/img/outProfile-${region1}-Et_20-noPF-*.png ${Likelihood_plot_dir}
+mv test/dato/img/outProfile-${region1}-Et_20-noPF-*.png ${Likelihood_plot_dir}
 ```
 
 source cleaner_step2.sh (non mi piace molto) ./submit_step2.sh ./submit_step2_corr.sh
