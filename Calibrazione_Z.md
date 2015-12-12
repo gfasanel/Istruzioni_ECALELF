@@ -69,7 +69,7 @@ echo "d2 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_d2-${fil
 ./script/fit.sh test/dato/fitres/outProfile-${region2}-Et_20-noPF.root
 Likelihood_plot_dir=~/scratch1/www/Validation_ntuple_Paolo
 mv test/dato/img/outProfile-${region1}-Et_20-noPF-*.png ${Likelihood_plot_dir}
-mv test/dato/img/outProfile-${region1}-Et_20-noPF-*.png ${Likelihood_plot_dir}
+mv test/dato/img/outProfile-${region2}-Et_20-noPF-*.png ${Likelihood_plot_dir}
 ```
 
 source cleaner_step2.sh (non mi piace molto) ./submit_step2.sh ./submit_step2_corr.sh
