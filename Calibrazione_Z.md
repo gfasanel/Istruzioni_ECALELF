@@ -61,8 +61,10 @@ echo "d2 smearerCat_${region2} friends/smearerCat/smearerCat_${region2}_d2-${fil
 ###Da qui in poi dipende dalla massa prescelta
 * Lancia un profile, prima di lanciare i job, nel caso passa un initFile di imbeccata
 ```
-./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit --plotOnly --profileOnly
-./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region2}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit --plotOnly --profileOnly
+./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region1}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit --plotOnly 
+#--profileOnly
+./bin/ZFitter.exe -f data/validation/${file}.dat --regionsFile=data/regions/${region2}.dat --invMass_var=${invMass_type} --commonCut=Et_20-noPF --autoBin --smearerFit --plotOnly 
+#--profileOnly
 ```
 
 source cleaner_step2.sh (non mi piace molto) ./submit_step2.sh ./submit_step2_corr.sh
