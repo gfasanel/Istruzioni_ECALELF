@@ -5,7 +5,7 @@
 ```
 file=Rereco_December2015
 script/pileup_histoMaker.sh $file
-#Ti fai gli istogrammi del pileup per dati e MC con puMaker.C e puHadder.C (dal branch miniAOD) {Fai i pileupHist, con un draw secco di nPV per dati e MC}
+#Ti fai gli istogrammi del pileup per dati e MC con macro/puMaker.C {Fai i pileupHist, con un draw secco di nPV per dati e MC}
 #Aggiungi al dat iniziale ha la lista dei dati, la lista dei MC e i pileUPHist
 ```
 * Crea i tree del pileup e allo stesso tempo categorizza tramite ZFitter
