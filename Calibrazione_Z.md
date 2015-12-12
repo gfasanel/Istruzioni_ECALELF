@@ -1,19 +1,19 @@
 ### Calibrazione alla Z
 
 * Scriviti un dat file che contenga dati e MC (vedi https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/File_partenza.dat)
+* Fatti gli istogrammi del pileUP
 ```
-file=Rereco_emanuele
+file=Rereco_December2015
 script/pileup_histoMaker.sh $file
 #Ti fai gli istogrammi del pileup per dati e MC con puMaker.C e puHadder.C (dal branch miniAOD) {Fai i pileupHist, con un draw secco di nPV per dati e MC}
 #Aggiungi al dat iniziale ha la lista dei dati, la lista dei MC e i pileUPHist
 ```
-
-* Crea i tree del pileup e allo stesso tempo categorizza tramite ZFitter (vedi sotto)
+* Crea i tree del pileup e allo stesso tempo categorizza tramite ZFitter
 
 ```
 ##CATEGORIZZAZIONE E PILEUP TREE (LE 8 CATEGORIE ETA-R9 SONO INDIPENDENTI DALLA MASSA)
 #file=miniAOD_November2015_Cal_Nov2015_ICcomb_v4 
-file=Rereco_emanuele
+file=Rereco_December2015
 file=miniAOD_November2015_withPho
 region1=scaleStep2smearing_1 
 region2=scaleStep2smearing_2 
