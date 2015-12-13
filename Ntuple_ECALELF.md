@@ -1,6 +1,7 @@
 * da Calibration/EcalAlcarecoProducers/
 * Per ora il branch giusto e' `mergeattempt` da Photon_regression
 * Girare in locale, prima di sottomettere jobs
+* https://cmsweb.cern.ch/das/request?view=list&limit=50&instance=prod%2Fglobal&input=dataset%3D%2FZToEE*%2F*RunIISpring15MiniAODv2*%2F*AOD*
 ```
 ##DATI
 file="root://eoscms//eos/cms/store/data/Run2015D/DoubleEG/MINIAOD/PromptReco-v4/000/259/862/00000/389D079E-EA7B-E511-9506-02163E0141D8.root"
