@@ -1,0 +1,8 @@
+absEta_0_1-bad  runNumber       0       999999  1.00458 0.000071520
+absEta_0_1-gold runNumber       0       999999  1.00118139      0.000066204
+absEta_1_1.4442-bad       runNumber     0 999999        1.003391463     0.00012201
+absEta_1_1.4442-gold      runNumber     0 999999        0.993542        0.00032102
+absEta_1.566_2-bad        runNumber     0 999999        1.013859        0.00019986
+absEta_1.566_2-gold       runNumber     0 999999        1.00466163      0.00028867
+absEta_2_2.5-bad          runNumber     0 999999        1.0218784       0.00029117
+absEta_2_2.5-gold         runNumber     0 999999        1.0145383       0.00018749
