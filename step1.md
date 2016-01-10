@@ -15,6 +15,7 @@ emacs data/runRanges/Rereco_December2015_interval_100000.dat
 Una volta ottenuto il file con i run ranges puoi lanciare lo step1:
 ```
 ./script/energyScale.sh --step=1 -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
+./script/energyScale.sh --step=1stability -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
 ```
 
 Lo step1 fitta i dati con una Breit-Wigner convoluta con una Crystal Ball e anche il MC con la stessa funzione di fit;
@@ -22,3 +23,4 @@ e lo fa in funzione del runRange, quindi del tempo.
 
 --> L'idea dello step1 e' quella di riportare ad ogni tempo la scala dei dati a quella del MC
 
+step1_2.md va mergiato con questo
