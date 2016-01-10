@@ -13,7 +13,9 @@ A questo punto puoi produrre il file con i run limits, da usare per lo step1
 # ti trovi quindi
 emacs data/runRanges/Rereco_December2015_interval_100000.dat
 ```
-Una volta ottenuto il file con i run ranges puoi lanciare lo step1:
+Una volta ottenuto il file con i run ranges puoi lanciare lo step1 (da una sessione screen perche' impiega molto tempo)
+
+`Screen_init step1 011`, chiamando kinit 2 volte
 ```
 ./script/energyScale.sh --step=1 -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
 ./script/energyScale.sh --step=1stability -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
