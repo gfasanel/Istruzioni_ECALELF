@@ -4,6 +4,7 @@ Preliminarmente hai bisogno di:
 * un file di *run limits*, ossia un file che fissi i paletti: a questo run comincia Bon, a questo BOff ecc...
 * piazza il file coi paletti in `data/runRanges/runRangeLimits.dat`
 * decidere le lumisection per run-range: es. 100.000 run per "calibrazione di scala"
+* creare i pileupHist per i dati
 
 A questo punto puoi produrre il file con i run limits, da usare per lo step1
 
