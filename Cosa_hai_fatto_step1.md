@@ -15,20 +15,21 @@
 #Metti i root file delle correzioni in luogo sicuro
 mv tmp/scaleEle_HggRunEta_[s,d][1-9]-miniAOD_November2015.root test/dato/*/step1/
 ```
-e questo sarebbe lo step di stability
 
-    xVar=runNumber
-    if [ ! -d ${outDirData}/step1/img/stability/$xVar ];then
-        mkdir -p ${outDirData}/step1/img/stability/$xVar
-    fi
+**Step1 Stability**
 
-    ./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
-        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y peak || exit 1
-    ./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
-        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y scaledWidth || exit 1
-    ./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
-        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y peak --allRegions || exit 1
+```
+xVar=runNumber
 
+./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y peak
+        
+./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y scaledWidth
+        
+./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y peak --allRegions
+```
 
 
 
