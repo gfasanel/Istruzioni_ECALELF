@@ -20,6 +20,11 @@ emacs data/runRanges/Rereco_December2015_interval_100000.dat
 ```
 Una volta ottenuto il file con i run ranges puoi lanciare lo step1 (da una sessione screen perche' impiega molto tempo)
 
+Se hai gia' lanciato lo step1, ma qualcosa e' andato storto:
+```
+rm -r test/dato/nome_file/tab/tab/step1/
+rm test/dato/nome_file/tab/tab/step1/table/step1*
+```
 `Screen_init step1 011`
 , chiamando kinit 2 volte e cmsenv basta una volta sola alla fine
 ```
