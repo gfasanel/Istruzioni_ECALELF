@@ -1,6 +1,6 @@
 Step1 si occupa della stabilita' della scala in funzione del tempo e di eta
 
-Lo step1 fitta i dati con una Breit-Wigner convoluta con una Crystal Ball e anche il MC con la stessa funzione di fit;
+Lo step1 fitta i dati, in bin di eta e run range, con una **Breit-Wigner convoluta con una Crystal Ball** e anche il MC con la stessa funzione di fit;
 e lo fa in funzione del runRange, quindi del tempo.
 
 --> L'idea dello step1 e' quella di riportare ad ogni tempo la scala dei dati a quella del MC
@@ -25,6 +25,12 @@ Una volta ottenuto il file con i run ranges puoi lanciare lo step1 (da una sessi
 ```
 ./script/step1_maker.sh file runrage.dat
 ```
+
+Al termine ti troverai una cartella in test/MC/xx con i fit al MC
+
+e 
+
+test/dato/filename/ con i fit ai dati
 
 ```
 ./script/energyScale.sh --step=1 -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
