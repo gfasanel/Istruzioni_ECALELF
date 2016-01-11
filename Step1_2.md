@@ -98,19 +98,3 @@ root -l -b
 PlotMeanHist("test/dato/miniAOD_November2015/loose/invMass_SC_corr/step2/1/fitres/histos-scaleStep2smearing_2-Et_20-noPF.root")
 .q
 cp test/dato/miniAOD_November2015/loose/invMass_SC_corr/step2/1/./img/histos*.png ~/scratch1/www/RUN2_ECAL_Calibration/scale_smearing_Z/histos_data_MC_corr_2/
-
-#Fittare un solo profilo
-root -l -b
-.L macro/fitOneProfile.C
-fitOneProfile("test/dato/miniAOD_November2015/loose/invMass/step2/2/fitres/outProfile-scaleStep2smearing_1-Et_20-noPF.root","~/scratch1/www/RUN2_ECAL_Calibration/scale_smearing_Z/")
-
-./script/fit.sh test/dato/miniAOD_November2015/loose/invMass/step2/2/fitres/outProfile-scaleStep2smearing_1-Et_20-noPF
-cp test/dato/miniAOD_November2015/loose/invMass/step2/2/img/outProfile*.png ~/scratch1/www/Temp
-
-
-
-A questo punto, salva le correzioni su un ROOT file
-
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --smearEleType=stochastic --smearEleFile=mc_smear/smearing_sigma_and_errors_stocastic_rd_mc.dat --saveRootMacro
-
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --smearEleType=stochastic --smearEleFile=mc_smear/smearing_sigma_and_errors_stocastic_rd_mc.dat --corrEleType=HggRunEtaR9Et --corrEleFile=data_scale/step8-invMass_SC_regrCorrSemiParV5_pho-loose-Et_20-trigger-noPF-HggRunEtaR9Et.dat --saveRootMacro
