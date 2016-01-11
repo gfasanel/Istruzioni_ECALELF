@@ -28,14 +28,12 @@ rm test/dato/nome_file/tab/tab/step1/table/step1*
 `Screen_init step1 011`
 , chiamando kinit 2 volte e cmsenv basta una volta sola alla fine
 ```
-./script/step1_maker.sh file runrage.dat
+./script/step1_maker.sh file runrage.dat # da sistemare
 ```
 
-Al termine ti troverai una cartella in test/MC/xx con i fit al MC
-
-e 
-
-test/dato/filename/ con i fit ai dati
+**Al termine dello step 1 avrai:**
+* una cartella in test/MC/un_nome_creato_dallo_script/selezione/invMass/fitres & img con i fit al MC
+* una cartella in test/dato/filename/selezione/invMass/fitres & img con i fit ai dati
 
 ```
 ./script/energyScale.sh --step=1 -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
