@@ -22,8 +22,9 @@ Una volta ottenuto il file con i run ranges puoi lanciare lo step1 (da una sessi
 
 `Screen_init step1 011`
 , chiamando kinit 2 volte e cmsenv basta una volta sola alla fine
-./script/step1_maker.sh
-
+```
+./script/step1_maker.sh file runrage.dat
+```
 
 ```
 ./script/energyScale.sh --step=1 -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
