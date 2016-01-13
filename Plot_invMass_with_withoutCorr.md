@@ -8,7 +8,7 @@ invMass=invMass_SC_corr
 ```
 ./bin/ZFitter.exe -f $validation_file --regionsFile=$region_file --corrEleType=$corr_type --smearEleType=$smear_type invMass_var=$invMass --saveRootMacro
 ./script/hadder.sh
-root -l -b tmp/d_chain.root tmp/s1_chain.root tmp/load_dataMC.C macro/massPlotter.C
+root -l -b tmp/d_chain.root tmp/s_chain.root tmp/load_dataMC.C macro/massPlotter.C
 ```
 
 root -l tmp/d_chain.root tmp/s1_chain.root tmp/load_dataMC.C
