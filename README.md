@@ -5,8 +5,12 @@ L'organizzazione e': concetti (do this), definizione delle macro (do this == xxx
 script/step2_only_caller.sh che chiama script/calibration_8_categories.sh.
 Le funzioni sono definite in script/bash_functions_calibration_step2.sh
 
-1 step1
+**Step1**
+```
+./script/addBranch.sh per aggiungere il branch R9Eleprime
+./script/step1_maker.sh
+```
 
-./script/addBranch.sh
+**Step2**
 2 step2 on top of step1
 
