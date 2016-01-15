@@ -13,4 +13,7 @@ Le funzioni sono definite in script/bash_functions_calibration_step2.sh
 
 **Step2**
 2 step2 on top of step1
+```
+./script/step2_maker.sh aggiungere SCENARIO come variabile, per spezzare la cosa in piu' parti
+```
 
