@@ -28,17 +28,17 @@ Parti da un .dat file con dati e MC
 runRange * eta (fa sia step1 che step1 stability)
 ```
 #da chiamare in una sessione screen perche' ci vogliono diverse ore
-./script/step1_maker.sh
+./script/step1_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr
+```
 ```
 PUName: d_pileupHist_pu_data_my_test
 mcName: 
 con queste vengono costruiti i nomi delle cartelle
-ls test/MC/d_pileupHist_pu_data_my_test/loose/invMass_SC_corr/imgclea
-ls test/dato/my_test/loose/invMass_SC_corr/img/
-
-**Step2**
-2 step2 on top of step1
 ```
-./script/step2_maker.sh aggiungere SCENARIO come variabile, per spezzare la cosa in piu' parti
+**Step2**
+
+step2 e' fatto on top of step1
+```
+./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr
 ```
 
