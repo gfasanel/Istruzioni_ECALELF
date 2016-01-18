@@ -27,6 +27,7 @@ Parti da un .dat file con dati e MC
 
 runRange * eta (fa sia step1 che step1 stability)
 ```
+#da chiamare in una sessione screen perche' ci vogliono diverse ore
 ./script/step1_maker.sh
 ```
 PUName: d_pileupHist_pu_data_my_test
