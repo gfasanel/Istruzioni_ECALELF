@@ -24,8 +24,9 @@ Parti da un .dat file con dati e MC
 ```
 
 **Step1**
+
+runRange * eta
 ```
-./script/addBranch.sh per aggiungere il branch R9Eleprime
 ./script/step1_maker.sh
 ```
 
