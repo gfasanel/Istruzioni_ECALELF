@@ -32,7 +32,9 @@ runRange * eta (fa sia step1 che step1 stability)
 ```
 PUName: d_pileupHist_pu_data_my_test
 mcName: 
-
+con queste vengono costruiti i nomi delle cartelle
+ls test/MC/d_pileupHist_pu_data_my_test/loose/invMass_SC_corr/imgclea
+ls test/dato/my_test/loose/invMass_SC_corr/img/
 
 **Step2**
 2 step2 on top of step1
