@@ -39,6 +39,7 @@ con queste vengono costruiti i nomi delle cartelle
 
 step2 e' fatto on top of step1
 ```
-./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr
+./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr Categorize
+./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr Test_job
 ```
 
