@@ -25,10 +25,13 @@ Parti da un .dat file con dati e MC
 
 **Step1**
 
-runRange * eta
+runRange * eta (fa sia step1 che step1 stability)
 ```
 ./script/step1_maker.sh
 ```
+PUName: d_pileupHist_pu_data_my_test
+mcName: 
+
 
 **Step2**
 2 step2 on top of step1
