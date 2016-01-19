@@ -18,6 +18,19 @@
 * `cp config/reRecoTags/74X_dataRun2_Prompt_v4.py config/reRecoTags/76X_dataRun2_v15.py`
 * `cp config/reRecoTags/74X_mcRun2_asymptotic_v2.py config/reRecoTags/76X_mcRun2_v12.py`
 * Adesso, apri i config.py e metti il giusto global tag dentro
+```
+# il config.py deve essere cosi' con il global tag GIUSTO!
+import FWCore.ParameterSet.Config as cms
+
+from CondCore.DBCommon.CondDBSetup_cfi import *
+
+RerecoGlobalTag = cms.ESSource("PoolDBESSource",
+                               CondDBSetup,
+                               connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),
+                               globaltag = cms.string('74X_mcRun2_asymptotic_v2'),
+                               )
+
+```
 
 **Step0+: girare in locale**
 * Girare in locale, prima di sottomettere jobs
