@@ -16,6 +16,11 @@ source ../initCmsEnv.sh
 * `dataset=/DYToEE*/*76*/*MINIAOD*`
 * `dataset=/ZToEE*/*MiniAODv2*76*/*MINIAOD*`
 
+* Dopo che hai trovato il nome del sample, prenditi un paio di nomi, oppure da browser: download
+```
+das_client --query="file dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD" --limit=5
+das_client --query="site dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD"
+```
 **Step0_bis**
 * Trovarsi i global tag con i quali sono stati prodotti i sample: da DAS, cliccando su configs; 
 * Esempio `Global Tag: 76X_dataRun2_v15`
