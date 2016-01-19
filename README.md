@@ -46,5 +46,8 @@ step2 e' fatto on top of step1
 ```
 ./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr Categorize
 ./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr Test_job
+./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr Submit_jobs
+./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr Fit_and_plot
+
 ```
 
