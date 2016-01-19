@@ -14,13 +14,13 @@
 **Step0+: girare in locale**
 * Girare in locale, prima di sottomettere jobs
 * Se funziona, alcareco_datasets.dat vanno messi i DAS name
-* https://cmsweb.cern.ch/das/request?view=list&limit=50&instance=prod%2Fglobal&input=dataset%3D%2FZToEE*%2F*RunIISpring15MiniAODv2*%2F*AOD*
 ```
 ##DATI
 file="root://eoscms//eos/cms/store/data/Run2015D/DoubleEG/MINIAOD/PromptReco-v4/000/259/862/00000/389D079E-EA7B-E511-9506-02163E0141D8.root"
 
 tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 json_File=/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_Silver.txt
+
 file="root://xrootd.unl.edu//store/user/emanuele/DoubleEG/ZElectron_Run2015D_v3_74X_dataRun2_Candidate_2015_12_04_11_16_06/151204_115447/0000/reRECO_RAW2DIGI_L1Reco_RECO_PAT_1.root"
 cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=$file maxEvents=1000 isCrab=0 tagFile=${tag} jsonFile=${json_File}
 #Ti trovi una ntupla in locale:
