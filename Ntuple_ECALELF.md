@@ -11,6 +11,14 @@
 * `dataset=/DYToEE*/*76*/*MINIAOD*`
 * `dataset=/ZToEE*/*MiniAODv2*76*/*MINIAOD*`
 
+**Step0_bis**
+* Trovarsi i global tag con i quali sono stati prodotti i sample: da DAS, cliccando su configs; 
+* Esempio `Global Tag: 76X_dataRun2_v15`
+* Copiati un config esistente e metti dentro il giusto global tag che hai preso dalla DAS
+* `cp config/reRecoTags/74X_dataRun2_Prompt_v4.py config/reRecoTags/76X_dataRun2_v15.py`
+* `cp config/reRecoTags/74X_mcRun2_asymptotic_v2.py config/reRecoTags/76X_mcRun2_v12.py`
+* Adesso, apri i config.py e metti il giusto global tag dentro
+
 **Step0+: girare in locale**
 * Girare in locale, prima di sottomettere jobs
 * Se funziona, alcareco_datasets.dat vanno messi i DAS name
