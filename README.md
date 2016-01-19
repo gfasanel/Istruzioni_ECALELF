@@ -1,5 +1,10 @@
 ##Calibrazione al RUN2
-0 (per essere veloce). Solo le 8 categorie eta*r9
+
+**Step 0: Farsi le ntuple**
+https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_ECALELF.md
+https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Sottomissione_ntuple.sh
+
+**0 (per essere veloce). Solo le 8 categorie eta*r9**
 
 L'organizzazione e': concetti (do this), definizione delle macro (do this == xxx) e caller
 script/step2_only_caller.sh che chiama script/calibration_8_categories.sh.
