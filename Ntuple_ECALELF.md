@@ -14,6 +14,10 @@
 **Step0+: girare in locale**
 * Girare in locale, prima di sottomettere jobs
 * Se funziona, alcareco_datasets.dat vanno messi i DAS name
+
+```
+./script/local_run.sh #dentro lo script specifica il file, il tag e il json
+```
 ```
 ##DATI
 file="root://eoscms//eos/cms/store/data/Run2015D/DoubleEG/MINIAOD/PromptReco-v4/000/259/862/00000/389D079E-EA7B-E511-9506-02163E0141D8.root"
