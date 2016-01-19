@@ -1,6 +1,17 @@
 * da Calibration/EcalAlcarecoProducers/
 * Per ora il branch giusto e' `mergeattempt` da Photon_regression
-* Ti devi trovare i file sulla DAS
+
+**Step0: trovarsi i file sulla DAS**
+* **Per i dati**
+* Per i dati devi cercare `dataset=/DoubleEG/*/*MINIAOD` 
+* Qualcosa del genere `dataset=/DoubleEG/*Run2015D*/*MINIAOD`
+* Per avere piu' informazioni `config dataset=xxxx`, per esempio per sapere se e' fatto in 74 o 76 eccetera
+* **Per il MC**
+* `dataset=/DYJetsToLL*/*76*/*MINIAOD*` 76 specifica la versione di CMSSW
+* `dataset=/DYToEE*/*76*/*MINIAOD*`
+* `dataset=/ZToEE*/*MiniAODv2*76*/*MINIAOD*`
+
+**Step0+: girare in locale**
 * Girare in locale, prima di sottomettere jobs
 * Se funziona, alcareco_datasets.dat vanno messi i DAS name
 * https://cmsweb.cern.ch/das/request?view=list&limit=50&instance=prod%2Fglobal&input=dataset%3D%2FZToEE*%2F*RunIISpring15MiniAODv2*%2F*AOD*
