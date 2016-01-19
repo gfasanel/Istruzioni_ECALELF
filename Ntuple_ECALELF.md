@@ -24,15 +24,15 @@
 * Se funziona, alcareco_datasets.dat vanno messi i DAS name
 
 ```
-./script/local_run.sh #dentro lo script specifica il file, il tag e il json
+#dentro lo script specifica il file, il tag e il json
+./script/local_run.sh data (MC) 
 ```
 ```
 ##DATI
-file="root://eoscms//eos/cms/store/data/Run2015D/DoubleEG/MINIAOD/PromptReco-v4/000/259/862/00000/389D079E-EA7B-E511-9506-02163E0141D8.root"
-
+##file="root://eoscms//eos/cms/store/data/Run2015D/DoubleEG/MINIAOD/PromptReco-v4/000/259/862/00000/389D079E-EA7B-E511-9506-02163E0141D8.root"
+##Esempio
 tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
 json_File=/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_Silver.txt
-
 file="root://xrootd.unl.edu//store/user/emanuele/DoubleEG/ZElectron_Run2015D_v3_74X_dataRun2_Candidate_2015_12_04_11_16_06/151204_115447/0000/reRECO_RAW2DIGI_L1Reco_RECO_PAT_1.root"
 cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=$file maxEvents=1000 isCrab=0 tagFile=${tag} jsonFile=${json_File}
 #Ti trovi una ntupla in locale:
@@ -40,7 +40,8 @@ ls ntuple_numEvent1000.root
 
 ##MC
 ## A noi interessa miniAOD v2
-file="root://xrootd.unl.edu//store/mc/RunIISpring15MiniAODv2/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/74X_mcRun2_asymptotic_v2-v1/50000/041705A6-6F6F-E511-AC9C-001E6757F1D4.root"
+##file="root://xrootd.unl.edu//store/mc/RunIISpring15MiniAODv2/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINAODSIM/74X_mcRun2_asymptotic_v2-v1/50000/041705A6-6F6F-E511-AC9C-001E6757F1D4.root"
+##Esempio
 tagMC=config/reRecoTags/74X_mcRun2_asymptotic_v2.py
 file="root://xrootd.unl.edu//store/mc/RunIISpring15MiniAODv2/ZToEE_NNPDF30_13TeV-powheg_M_50_120/MINIAODSIM/74X_mcRun2_asymptotic_v2-v1/10000/005C8B52-D973-E511-B557-38EAA78D8F98.root"
 cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=file:$file maxEvents=1000 isCrab=0 tagFile=${tagMC} MC=1
