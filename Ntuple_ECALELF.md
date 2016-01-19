@@ -28,6 +28,7 @@
 ./script/local_run.sh data (MC) 
 ```
 ```
+##Esempi a manina (quello che fa local_run.sh)
 ##DATI
 ##file="root://eoscms//eos/cms/store/data/Run2015D/DoubleEG/MINIAOD/PromptReco-v4/000/259/862/00000/389D079E-EA7B-E511-9506-02163E0141D8.root"
 ##Esempio
