@@ -1,6 +1,7 @@
 * da Calibration/EcalAlcarecoProducers/
 * Per ora il branch giusto e' `mergeattempt` da Photon_regression
 * Girare in locale, prima di sottomettere jobs
+* Se funziona, alcareco_datasets.dat vanno messi i DAS name
 * https://cmsweb.cern.ch/das/request?view=list&limit=50&instance=prod%2Fglobal&input=dataset%3D%2FZToEE*%2F*RunIISpring15MiniAODv2*%2F*AOD*
 ```
 ##DATI
