@@ -1,6 +1,11 @@
 * da Calibration/EcalAlcarecoProducers/
 * Per ora il branch giusto e' `mergeattempt` da Photon_regression
 
+```
+source ../initCmsEnv.sh
+#che fa sostanzialmente voms-proxy-init -voms cms. Va fatto altrimenti potresti non avere i permessi per aprire alcuni file
+```
+
 **Step0: trovarsi i file sulla DAS**
 * **Per i dati**
 * Per i dati devi cercare `dataset=/DoubleEG/*/*MINIAOD` 
