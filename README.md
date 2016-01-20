@@ -26,9 +26,10 @@ Parti da un .dat file con dati e MC
 * Controlla che il branch aggiunto r9 sia sensato
 ```
  ./bin/ZFitter.exe -f data/validation/my_test.dat --addBranch=R9Eleprime --saveRootMacro --regionsFile=data/regions/scaleStep0.dat 
-root -l tmp/d_selected_chain.root tmp/s_selected_chain.root macro/load_dataMC.C
-data->Draw
-signalA->Draw
+./script/hadder.sh
+root -l tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C
+data->Draw("R9Eleprime[0]")
+signalA->Draw("R9Eleprime[0]")
 ```
 
 **Step1**
