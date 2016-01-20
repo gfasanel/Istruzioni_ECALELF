@@ -22,7 +22,7 @@ s1      selected    root:://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/
 nIISpring15MiniAODv2-Asym25ns-miniAOD-withPho/allRange/merged.root
 ```
 ```
-./script/Init_calibration_procedure.sh data/validation/my_test.dat
+./script/Init_calibration_procedure.sh data/validation/my_test.dat 100000 invMass_SC_corr
 
 #Si fanno queste cose
 1-Aggiungi il branch r9
