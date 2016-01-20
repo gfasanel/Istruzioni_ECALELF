@@ -32,19 +32,3 @@ xVar=runNumber
 ```
 
 
-
-./bin/ZFitter.exe -f ~gfasanel/public/4shervin/miniAOD_November2015.dat --regionsFile data/regions/scaleStep1.dat   	    --saveRootMacro --corrEleType HggRunEta 	    --corrEleFile ~gfasanel/public/4shervin/step1-invMass-loose-Et_20-noPF-HggRunEta.dat 
-
-
-start fresh
-leva i signal smearer dal .dat
-rm -r test/dato/miniAOD_November2015/loose/invMass/step2/
-rm -r test/dato/miniAOD_November2015/loose/invMass/table/outFile-step2-invMass-loose-Et_20-noPF-HggRunEtaR9.dat
-
-./script/MYenergyScale.sh --step=2 -f data/validation/miniAOD_November2015.dat --invMass_var=invMass --runRangesFile=data/runRanges/monitoringRun2015-25ns-interval_50000.dat
-
-++++++++++
-Categorizza e scrive il giusto file con le categorizzazioni:
-./script/energyScale.sh --step=2 -f data/validation/miniAOD_November2015.dat --invMass_var=invMass --runRangesFile=data/runRanges/monitoringRun2015-25ns-interval_50000.dat
-
-
