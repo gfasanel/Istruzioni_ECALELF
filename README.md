@@ -13,19 +13,15 @@ Le funzioni sono definite in script/bash_functions_calibration_step2.sh
 **Init**
 
 Parti da un .dat file con dati e MC 
-
-1-Aggiungi il branch r9
-
-2-fai i pileupHist
-
-3-dai pileupHist dai i pileupTrees
-
-4-riscriviti il dat file con i friend trees appena creati
-
-5-scrivi anche il file rundivide in data/runRanges/....
-
 ```
 ./script/Init_calibration_procedure.sh data/validation/my_test.dat
+
+#Si fanno queste cose
+1-Aggiungi il branch r9
+2-fai i pileupHist
+3-dai pileupHist dai i pileupTrees
+4-riscriviti il dat file con i friend trees appena creati
+5-scrivi anche il file rundivide in data/runRanges/....
 ```
 
 **Step1**
