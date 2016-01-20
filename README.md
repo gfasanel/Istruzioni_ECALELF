@@ -23,6 +23,10 @@ Parti da un .dat file con dati e MC
 4-riscriviti il dat file con i friend trees appena creati
 5-scrivi anche il file rundivide in data/runRanges/....
 ```
+* Controlla che il branch aggiunto r9 sia sensato
+```
+./bin/ZFitter.exe -f data/validation/Rereco_December2015.dat --addBranch=R9Eleprime --saveRootMacro --regionsFile=data/regions/scaleStep0.dat 
+```
 
 **Step1**
 
