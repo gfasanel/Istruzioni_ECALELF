@@ -12,7 +12,15 @@ Le funzioni sono definite in script/bash_functions_calibration_step2.sh
 
 **Init**
 
-Parti da un .dat file con dati e MC 
+Parti da un .dat file con dati e MC, qualcosa cosi'
+```
+#nota i tab!!
+d1      selected     root://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_dataRun2_Prompt_v4/DoubleEG-ZSkim-Run2\
+015C-rereco05Oct2015-MINIAOD/254227-255031/246908-260627-Prompt_25ns-v1-golden_silver/unmerged-allRange-miniAOD.root
+
+s1      selected    root:://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_mcRun2_asymptotic_v2/DYJets_amctnlo-Ru\
+nIISpring15MiniAODv2-Asym25ns-miniAOD-withPho/allRange/merged.root
+```
 ```
 ./script/Init_calibration_procedure.sh data/validation/my_test.dat
 
