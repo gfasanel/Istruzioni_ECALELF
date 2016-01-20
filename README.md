@@ -30,6 +30,7 @@ Parti da un .dat file con dati e MC
 root -l tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C
 data->Draw("R9Eleprime[0]")
 signalA->Draw("R9Eleprime[0]")
+#ho scritto una macro stupida di confronto macro/R9comp.C
 ```
 
 **Step1**
