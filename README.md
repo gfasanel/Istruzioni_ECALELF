@@ -41,6 +41,12 @@ signalA->Draw("R9Eleprime[0]")
 #ho scritto una macro stupida di confronto macro/R9comp.C
 ```
 
+*Controlla anche che i nomi delle cartelle che saranno creati in step1 siano sensati
+```
+./script/step0_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr
+```
+Se, ad esempio qualche variabile e' vuota/strana vuol dire che functions.sh -> mcName, ad esempio, si sta confondendo con i tab --> provvedi!
+
 **Step1**
 
 runRange * eta (fa sia step1 che step1 stability)
