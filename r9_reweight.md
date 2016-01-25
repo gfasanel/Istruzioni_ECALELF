@@ -7,7 +7,14 @@ TFile* f = TFile::Open("~gfasanel/public/R9_transformation/transformation.root")
 TGraph* gR9EB = (TGraph*) f->Get("transformR90");
 TGraph* gR9EE = (TGraph*) f->Get("transformR91");
 #e poi quando usi R9:
-float r9prime = gR9EB->Eval(r9);
-float r9prime = gR9EE->Eval(r9);
+float r9prime;
+if(isMC && barrel){
+  r9prime = gR9EB->Eval(r9);}
+else if(isMC && endcap){
+  r9prime = gR9EE->Eval(r9);
+}else{
+  r9prime=r9;
+}
+
 
 ```
