@@ -6,6 +6,6 @@ make
  ./script/hadder.sh
  root -l tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C
  ###Ora, e solo ora, puoi usare i metodi di GetCut
- TCut c=GetCut("R9p_97")
+ TCut c=GetCut("r9primep_97")
  c.Print()
  ```
