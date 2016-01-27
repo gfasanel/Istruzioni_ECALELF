@@ -47,6 +47,10 @@ signalA->Draw("R9Eleprime[0]")
 ```
 Se, ad esempio qualche variabile e' vuota/strana vuol dire che functions.sh -> mcName, ad esempio, si sta confondendo con i tab --> provvedi!
 
+**Apri screen e fagli fare gli step in cascata**
+```
+./script/steps_maker.sh data/validation/December2015_Rereco_C_D_withPho.dat 100000 invMass_SC_pho_regrCorr
+```
 **Step1**
 
 runRange * eta (fa sia step1 che step1 stability)
