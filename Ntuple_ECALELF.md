@@ -138,6 +138,7 @@ source hadder_ntuples.sh
 
 ### Se il tuo job e' riuscito, sottomettili tutti
 ```
+exitCode 0 (vuol dire job riuscito)
 #con 
 ./submit_ntuple.sh e ci metti --submitOnly (invece che --createOnly) 
 
