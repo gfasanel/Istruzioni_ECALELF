@@ -136,3 +136,30 @@ quando sei soddisfatto dei tuoi job devi mergiare
 
 source hadder_ntuples.sh
 
+### Se il tuo job e' riuscito, sottomettili tutti
+```
+#con 
+./submit_ntuple.sh e ci metti --submitOnly (invece che --createOnly) 
+
+dopo di che li segui tutti con --check (invece che --submitOnly). Lui li segue tutti e quando hanno finiti li mergia anche
+source ../initCmsEnvCRAB2.sh
+#where=lsf                                                                                                                                                                      
+where=remoteGlidein
+tag=config/reRecoTags/74X_dataRun2_Prompt_v4.py
+json=/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_Silver.txt
+jsonName=246908-260627-Prompt_25ns-v1-golden_silver
+./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep Run2015C | grep withPho` --type MINIAOD --scheduler=${where} --tag=${tag} --json=${json} --json_name\
+=${jsonName} --submitOnly
+
+#tagMC=config/reRecoTags/74X_mcRun2_asymptotic_v2.py                                                                                                                            
+#./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep M200to400` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --check                        
+#./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep M400to500` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --check                        
+#./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep M500to700` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --check                        
+#/scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep DYToEE_amcatnlo` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --check                   
+#./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep DYToEE_powheg | grep MiniAODv2` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --check   
+#./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep ZToEE | grep M_200_400` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --check           
+#./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep ZToEE | grep M_400_800` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC} --check           
+
+
+```
+
