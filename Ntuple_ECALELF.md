@@ -90,6 +90,8 @@ source ../initCmsEnvCRAB2.sh
 * 1) Devi scrivere in alcareco_datasets.dat il dataset sul quale vuoi girare
 ```
 256584-258158 /DoubleEG/emanuele-ZElectron_Run2015D_v3_74X_dataRun2_Candidate_2015_12_04_11_16_06-5f619c1c848e615f4f8041df1ac5e2bd/USER DoubleEG-emanuele-ZElectron_Run2015D_v3_74X caf database VALID RUN2015D
+
+allRange        /DYJetsToLL_M-100to200_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1/MINIAODSIM          DYJets_amctnlo_M100to200-RunIISpring15MiniAODv2-Asym25ns-miniAOD-withPho caf database VALID highMass -
 ```
 * 2) prova che parseDataFile capisca il file giusto da prendere
 ```
