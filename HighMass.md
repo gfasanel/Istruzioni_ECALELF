@@ -1,57 +1,16 @@
 PILEUP
-Devi avere dei puHist da cui partire che fai brutalmente plottando nPV per data e MC (in modo da avere la distribuzione dei)
-un pileUPHist per i dati con tag d e un pileupHist per il MC con tag s
 
-INVMASS=invMass_SC_corr
-REGION=_mediumMass
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0${REGION}.dat invMass_var=${INVMASS} --saveRootMacro
-
-mv tmp/mcPUtrees*.root data/pu/mc/
-A questo punto i pileup Hist per data e MC NON ti servono piu' e li puoi quindi commentare
-
-
+```
 Attenzione che con saveRootMacro ci sono s1-scale e scale=blabal
 #mv tmp/d*_scaleEle_EtaR9_chain.root friends/others/ ++> NOOO, questi ad esempio sono MERDA, considerali come file temporanei del cazzo
-
-
-Ok, quindi so come leggere anche le correzioni: dai che forse ci sono (qui il regionsFile e' solo formale, non viene usata ma e' una opzione Mandatory)
-
-Da curare il fatto che src/Energy... per lo smearing: sbagliava il format (il format di ECALELF e' 2) 
-Importante definire l'energia quando prendi le categorie, altrimenti puo' fillare con NAN ed e' un casino
+```
 
 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --saveRootMacro --corrEleType=EtaR9 --corrEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/data_scale/scale_corrections_RUN2.dat --invMass_var=invMass_SC_corr
+
 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --smearEleType=stochastic --smearEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/mc_smear/smearing_corrections_RUN2.dat --saveRootMacro --invMass_var=invMass_SC_corr
+
 mv tmp/scaleEle_EtaR9*.root friends/others/
 mv tmp/smearEle_stochastic*.root friends/others/
-
-echo "s1      smearEle_stochastic     friends/others/smearEle_stochastic_s1-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "s2      smearEle_stochastic     friends/others/smearEle_stochastic_s2-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "d1      scaleEle_EtaR9            friends/others/scaleEle_EtaR9_d1-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "d2      scaleEle_EtaR9            friends/others/scaleEle_EtaR9_d2-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "d3      scaleEle_EtaR9            friends/others/scaleEle_EtaR9_d3-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-
-echo "s3      smearEle_stochastic     friends/others/smearEle_stochastic_s3-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-
-Fai le categorie:
-INVMASS=invMass_SC_corr
-REGION=_mediumMass
-REGION=_highMass
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0${REGION}.dat --addBranch=smearerCat invMass_var=${INVMASS} --saveRootMacro
-./script/hadder.sh
-root -l tmp/d_chain.root macro/load_singleFile.C
-data->Draw("invMass_SC_corr","smearerCat[0]>=0")
-
-CONTROLLA LE CATEGORIE
-
-mv tmp/smearerCat_scaleStep0${REGION}* friends/smearerCat/ 
-
-echo "s1      smearerCat_scaleStep0${REGION}     friends/smearerCat/smearerCat_scaleStep0${REGION}_s1-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "s2      smearerCat_scaleStep0${REGION}    friends/smearerCat/smearerCat_scaleStep0${REGION}_s2-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "s3      smearerCat_scaleStep0${REGION}    friends/smearerCat/smearerCat_scaleStep0${REGION}_s3-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "s4      smearerCat_scaleStep0${REGION}    friends/smearerCat/smearerCat_scaleStep0${REGION}_s4-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "d1      smearerCat_scaleStep0${REGION}    friends/smearerCat/smearerCat_scaleStep0${REGION}_d1-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "d2      smearerCat_scaleStep0${REGION}    friends/smearerCat/smearerCat_scaleStep0${REGION}_d2-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
-echo "d3      smearerCat_scaleStep0${REGION}    friends/smearerCat/smearerCat_scaleStep0${REGION}_d3-miniAOD_November2015.root" >> data/validation/miniAOD_November2015.dat
 
 
 TEST PRELIMINARI: (puoi farli con e senza correzioni, con e senza initFile)
