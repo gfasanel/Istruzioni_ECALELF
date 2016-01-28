@@ -18,7 +18,17 @@ source ../initCmsEnv.sh
 
 * Dopo che hai trovato il nome del sample, prenditi un paio di nomi, oppure da browser: download
 ```
+##Prenditi un paio di nomi di file
 das_client --query="file dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD" --limit=5
+Lui stampa:
+/store/data/Run2015D/DoubleEG/MINIAOD/04Dec2015-v2/10000/0006F6FD-EE9D-E511-B3D4-00304865C426.root
+#Al quali dovrai aggiungere il prefisso
+root://xrootd.unl.edu//
+
+##Qui, ad esempio, chiedi dove si trova il file
+das_client --query="site dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD"
+
+##Qui chiedi il global tag
 das_client --query="site dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD"
 ```
 **Step0_bis**
