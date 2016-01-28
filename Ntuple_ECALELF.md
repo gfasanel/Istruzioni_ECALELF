@@ -28,8 +28,8 @@ root://xrootd.unl.edu//
 ##Qui, ad esempio, chiedi dove si trova il file
 das_client --query="site dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD"
 
-##Qui chiedi il global tag
-das_client --query="site dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD"
+##Qui chiedi il global tag (per ora vado su configs da browser, ma e' una scocciatura)
+das_client --query="?? dataset=/DoubleEG/Run2015D-04Dec2015-v2/MINIAOD"
 ```
 **Step0_bis**
 * Trovarsi i global tag con i quali sono stati prodotti i sample: da DAS, cliccando su configs; 
