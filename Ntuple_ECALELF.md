@@ -12,9 +12,9 @@ source ../initCmsEnv.sh
 * Qualcosa del genere `dataset=/DoubleEG/*Run2015D*/*MINIAOD`
 * Per avere piu' informazioni `config dataset=xxxx`, per esempio per sapere se e' fatto in 74 o 76 eccetera
 * **Per il MC**
-* `dataset=/DYJetsToLL*/*76*/*MINIAOD*` 76 specifica la versione di CMSSW
-* `dataset=/DYToEE*/*76*/*MINIAOD*`
-* `dataset=/ZToEE*/*MiniAODv2*76*/*MINIAOD*`
+* `dataset=/DYJetsToLL*/*76*/*MINIAODSIM` 76 specifica la versione di CMSSW
+* `dataset=/DYToEE*/*76*/*MINIAODSIM`
+* `dataset=/ZToEE*/*MiniAODv2*76*/*MINIAODSIM`
 
 * Dopo che hai trovato il nome del sample, prenditi un paio di nomi, oppure da browser: download
 ```
