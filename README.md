@@ -80,7 +80,7 @@ step2 e' fatto on top of step1
 ```
 ./script/latex_table_writer.sh $file $commonCut (file e' cio' che ti sputa fuori la procedura di fitting)
 
-Nom_file=test/dato/December2015_Rereco_C_D/loose/invMass_SC_corr/table/outFile-step2-invMass_SC_corr-loose-Et_20-noPF-HggRunEtaR9.dat 
-Syst_files=test/dato/December2015_Rereco_C_D_withPho/loose/invMass_SC_pho_regrCorr/table/outFile-step2-invMass_SC_pho_regrCorr-loose-Et_20-noPF-HggRunEtaR9.dat 
+Nom_file="test/dato/December2015_Rereco_C_D/loose/invMass_SC_corr/table/outFile-step2-invMass_SC_corr-loose-Et_20-noPF-HggRunEtaR9.dat"
+Syst_files="test/dato/December2015_Rereco_C_D_withPho/loose/invMass_SC_pho_regrCorr/table/outFile-step2-invMass_SC_pho_regrCorr-loose-Et_20-noPF-HggRunEtaR9.dat"
 ./script/compare_datFiles.sh $Nom_file $Syst_files
 ```
