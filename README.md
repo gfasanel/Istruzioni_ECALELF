@@ -74,3 +74,7 @@ step2 e' fatto on top of step1
 ./script/step2_maker.sh data/validation/my_test.dat 100000 invMass_SC_corr write_down_corr_step1_step2
 ```
 
+(in realta' con scripts/steps_maker.sh hai gia' fatto tutto: pubblicato i plot sulla web page e tutto)
+
+**Scrivere le tabelle**
+./script/latex_table_writer.sh $file $commonCut (file e' cio' che ti sputa fuori la procedura di fitting)
