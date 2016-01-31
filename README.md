@@ -85,4 +85,8 @@ step2 e' fatto on top of step1
 Nom_file="test/dato/December2015_Rereco_C_D/loose/invMass_SC_corr/table/outFile-step2-invMass_SC_corr-loose-Et_20-noPF-HggRunEtaR9.dat"
 Syst_files="test/dato/December2015_Rereco_C_D_withPho/loose/invMass_SC_pho_regrCorr/table/outFile-step2-invMass_SC_pho_regrCorr-loose-Et_20-noPF-HggRunEtaR9.dat"
 ./script/compare_datFiles.sh $Nom_file $Syst_files
+
+3) Edita, scegliendo i max, cosa mettere e cosa no
+
+4) ./script/add_quadrature_syst_table.sh tmp/syst_scale.dat
 ```
