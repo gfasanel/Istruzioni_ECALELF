@@ -6,7 +6,9 @@ Attenzione che con saveRootMacro ci sono s1-scale e scale_blabla
 
 ./script/Init_calibration_procedure.sh data/validation/HighMass_study_2016_74.dat
 
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --saveRootMacro --corrEleType=EtaR9 --corrEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/data_scale/scale_corrections_RUN2.dat --invMass_var=invMass_SC_corr
+Categorizza con script/calibration_highMass.sh 
+
+./bin/ZFitter.exe -f data/validation/HighMass_study_2016_74.dat --regionsFile=data/regions/scaleStep0.dat --saveRootMacro --corrEleType=EtaR9 --corrEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/data_scale/scale_corrections_RUN2.dat --invMass_var=invMass_SC_corr
 
 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --smearEleType=stochastic --smearEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/mc_smear/smearing_corrections_RUN2.dat --saveRootMacro --invMass_var=invMass_SC_corr
 
