@@ -23,10 +23,10 @@ mv tmp/scaleEle_EtaR9*.root friends/others/
 mv tmp/smearEle_stochastic*.root friends/others/
 ```
 PlotOnly
-
-REGION=_mediumMass
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0${REGION}.dat --invMass_var=invMass_SC_corr --commonCut=Et_35-noPF --autoBin --smearerFit --plotOnly --profileOnly --targetVariable=ptRatio*pt2Sum --targetVariable_min=0.5*0 --targetVariable_max=2*300 --targetVariable_binWidth=0.02*6 --configuration=random --corrEleType=EtaR9 --smearEleType=stochastic --initFile=init_RUN2.txt | tee withCorr.txt
-
+```
+./bin/ZFitter.exe -f data/validation/HighMass_study_2016_74.dat --regionsFile=data/regions/scaleStep0.dat --invMass_var=invMass_SC_corr --commonCut=Et_35-noPF --autoBin --smearerFit --plotOnly --profileOnly --targetVariable=ptRatio*pt2Sum --targetVariable_min=0.5*0 --targetVariable_max=2*300 --targetVariable_binWidth=0.02*6 --configuration=random
+#--corrEleType=EtaR9 --smearEleType=stochastic --initFile=init_RUN2.txt
+```
 rm ~/scratch1/www/RUN2_ECAL_Calibration/scale_smearing_highMass/*.png
 root -l -b
 .L macro/fitOneProfile.C
