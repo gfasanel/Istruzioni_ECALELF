@@ -14,7 +14,7 @@ con script/calibration_highMass.sh --scenario=CatOnly #(qualcosa del genere)
 ```
 ```
 #Controlla da categorizzazione
-./bin/ZFitter.exe -f data/validation/HighMass_study_2016_74.dat 
+./bin/ZFitter.exe -f data/validation/HighMass_study_2016_74.dat\
 --regionsFile=data/regions/scaleStep0.dat --saveRootMacro --corrEleType=EtaR9 --corrEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/data_scale/scale_corrections_RUN2.dat --invMass_var=invMass_SC_corr
 ```
 
