@@ -14,7 +14,10 @@ con script/calibration_highMass.sh --scenario=CatOnly #(qualcosa del genere)
 ```
 ```
 #Controlla da categorizzazione
-./bin/ZFitter.exe -f data/validation/HighMass_study_2016_74.dat --regionsFile=data/regions/scaleStep0.dat --saveRootMacro --corrEleType=EtaR9 --corrEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/data_scale/scale_corrections_RUN2.dat --invMass_var=invMass_SC_corr
+./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --saveRootMacro --invMass_var=invMass_SC_corr
+./script/hadder.sh
+root -l tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C
+data->Draw("invMass_SC_corr","smearerCat[0]>0")
 ```
 ```
 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --smearEleType=stochastic --smearEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/mc_smear/smearing_corrections_RUN2.dat --saveRootMacro --invMass_var=invMass_SC_corr
