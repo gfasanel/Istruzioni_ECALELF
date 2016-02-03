@@ -16,24 +16,16 @@ con script/calibration_highMass.sh --scenario=CatOnly #(qualcosa del genere)
 #Controlla da categorizzazione
 ./bin/ZFitter.exe -f data/validation/HighMass_study_2016_74.dat --regionsFile=data/regions/scaleStep0.dat --saveRootMacro --corrEleType=EtaR9 --corrEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/data_scale/scale_corrections_RUN2.dat --invMass_var=invMass_SC_corr
 ```
-
+```
 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat --smearEleType=stochastic --smearEleFile=/afs/cern.ch/work/g/gfasanel/CMSSW_7_4_15/src/Calibration/ZFitter/mc_smear/smearing_corrections_RUN2.dat --saveRootMacro --invMass_var=invMass_SC_corr
 
 mv tmp/scaleEle_EtaR9*.root friends/others/
 mv tmp/smearEle_stochastic*.root friends/others/
+```
+PlotOnly
 
-
-TEST PRELIMINARI: (puoi farli con e senza correzioni, con e senza initFile)
 REGION=_mediumMass
 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0${REGION}.dat --invMass_var=invMass_SC_corr --commonCut=Et_35-noPF --autoBin --smearerFit --plotOnly --profileOnly --targetVariable=ptRatio*pt2Sum --targetVariable_min=0.5*0 --targetVariable_max=2*300 --targetVariable_binWidth=0.02*6 --configuration=random --corrEleType=EtaR9 --smearEleType=stochastic --initFile=init_RUN2.txt | tee withCorr.txt
-
-REGION=_mediumMass
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0${REGION}.dat --invMass_var=invMass_SC_corr --commonCut=Et_35-noPF --autoBin --smearerFit --plotOnly --profileOnly --targetVariable=ptRatio*pt2Sum --targetVariable_min=0.5*0 --targetVariable_max=2*300 --targetVariable_binWidth=0.02*6 --configuration=random --initFile=init_RUN2_noCorr.txt --outDirFitResData=test/dato/fitres/NOCorr/ | tee NOCorr.txt
-
-##HIGH MASS WITH CORR
-REGION=_highMass   
-./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0${REGION}.dat --invMass_var=invMass_SC_corr --commonCut=Et_35-noPF-DeltaEta_3 --autoBin --smearerFit --targetVariable=ptRatio*pt2Sum --targetVariable_min=0.5*0 --targetVariable_max=2*300 --targetVariable_binWidth=0.02*6 --configuration=random --initFile=init_RUN2_highMass_Corr.txt --corrEleType=EtaR9 --smearEleType=stochastic --plotOnly --profileOnly
-
 
 rm ~/scratch1/www/RUN2_ECAL_Calibration/scale_smearing_highMass/*.png
 root -l -b
