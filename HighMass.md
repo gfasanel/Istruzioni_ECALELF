@@ -4,7 +4,10 @@ Attenzione che con saveRootMacro ci sono s1-scale e scale_blabla
 #mv tmp/d*_scaleEle_EtaR9_chain.root friends/others/ ++> NOOO, questi ad esempio sono MERDA, considerali come file temporanei del cazzo
 ```
 
+```
+#Parti dal dat file con solo signale e dati e aggiungi il pileup
 ./script/Init_calibration_procedure.sh data/validation/HighMass_study_2016_74.dat
+```
 
 Categorizza con script/calibration_highMass.sh 
 
