@@ -2,7 +2,9 @@
 * Per ora il branch giusto e' `mergeattempt` da Photon_regression
 
 ```
-source ../initCmsEnv.sh
+ATTENTO CHE NON DEVI FARE source ../initCmsEnv.sh
+ma
+source ../initCmsEnvCRAB2.sh, perche' e' CRAB2 che devi usare e NON crab3
 #che fa sostanzialmente voms-proxy-init -voms cms. Va fatto altrimenti potresti non avere i permessi per aprire alcuni file
 ```
 
