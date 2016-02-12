@@ -142,6 +142,12 @@ crab -c prod_ntuples/MINIAODNTUPLE/DYJets_amctnlo-RunIISpring15MiniAODv2-Asym25n
 
 ./scripts/prodNtuples.sh `parseDatasetFile.sh alcareco_datasets.dat | grep withPho | head -n 2` --isMC --type MINIAOD --scheduler=${where} --tag=${tagMC}
 ```
+```
+./scripts/submit_ntuples.sh --createOnly
+./scripts/submit_ntuples.sh --submitOnly
+./scripts/submit_ntuples.sh --check
+```
+
 ### Babysitting dei job
 
 La procedura per risottomettere un job fallito e': crab -c bla bla -status e vedi quali sono falliti, -getoutput, -resubmit xx,yy
