@@ -1,6 +1,7 @@
 Ti scrivi il tuo file con dati e MC
 ```
 ./script/Init_calibration_procedure.sh data/validation/February2016_76_Rereco_HighMass.dat 100000 invMass_SC_pho_regrCorr
+./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr CatOnly
 ```
 
 
