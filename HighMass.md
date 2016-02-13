@@ -3,6 +3,9 @@ Ti scrivi il tuo file con dati e MC
 ./script/Init_calibration_procedure.sh data/validation/February2016_76_Rereco_HighMass.dat 100000 invMass_SC_pho_regrCorr
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr CatOnly
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr Test_job
+
+root root://eoscms.cern.ch//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_mcRun2_0T_v0/DYToEE_NNPDF30_13TeV-powheg-pyt\
+> hia8_0T_74/allRange/DYToEE_NNPDF30_13TeV-powheg-pythia8_0T_74-allRange.root
 ```
 
 
