@@ -1,3 +1,9 @@
+Ti scrivi il tuo file con dati e MC
+```
+./script/Init_calibration_procedure.sh data/validation/February2016_76_Rereco_HighMass.dat 100000 invMass_SC_pho_regrCorr
+```
+
+
 
 ```
 Attenzione che con saveRootMacro ci sono s1-scale e scale_blabla
