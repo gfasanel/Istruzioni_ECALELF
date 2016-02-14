@@ -2,12 +2,6 @@ Ti scrivi il tuo file con dati e MC
 ```
 ./script/Init_HighMass_calibration_procedure.sh data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr
 
-##########VALIDA ASSOLUTAMENTE LE CORREZIONI#############################
-./bin/ZFitter.exe -f $validation_file --regionsFile=$region_file --corrEleType=$corr_type --smearEleType=$smear_type invMass_var=$invMass --saveRootMacro
-./script/hadder.sh
-root -l -b tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C macro/massPlotter.C
-##########VALIDA ASSOLUTAMENTE LE CORREZIONI#############################
-
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr CatOnly
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr Test_job
 
