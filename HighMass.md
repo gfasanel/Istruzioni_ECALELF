@@ -21,7 +21,15 @@ fitOneProfile("test/dato/fitres/outProfile_ptRatio_pt2Sum_random_scaleStep0_Et_3
 ##scala ristretta
 
 ##If you need initParameters
+FITTA CON IL COSO GIUSTO, NON IL MIO RAPIDO RAPIDO, in MODO DA AVERE params
+scale_EE-invMass_200_2000-DeltaEta_3-Et_35-noPF =  1.0000 +/- 0.0050000 L(0.95 - 1.05) // [GeV]
+scale_EB-invMass_200_2000-DeltaEta_3-Et_35-noPF =  1.0050 +/- 0.0050000 L(0.95 - 1.05) // [GeV]
+constTerm_EE-invMass_200_2000-DeltaEta_3-Et_35-noPF =  0.010000 +/- 0.030000 L(0 - 0.05)
+constTerm_EB-invMass_200_2000-DeltaEta_3-Et_35-noPF =  0.0050000 +/- 0.030000 L(0 - 0.05)
+alpha_EE-invMass_200_2000-DeltaEta_3-Et_35-noPF =  0.0000 +/- 0.010000 C L(0 - 0.2)
+alpha_EB-invMass_200_2000-DeltaEta_3-Et_35-noPF =  0.0000 +/- 0.010000 C L(0 - 0.2)
 
+#Rilancia Test_job con initParameters
 
 root root://eoscms.cern.ch//eos/cms/store/group/dpg_ecal/alca_ecalcalib/ecalelf/ntuples/13TeV/MINIAODNTUPLE/74X_mcRun2_0T_v0/DYToEE_NNPDF30_13TeV-powheg-pyt\
 > hia8_0T_74/allRange/DYToEE_NNPDF30_13TeV-powheg-pythia8_0T_74-allRange.root
