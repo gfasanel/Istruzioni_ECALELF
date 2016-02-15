@@ -36,6 +36,7 @@ alpha_EB-invMass_200_2000-DeltaEta_3-Et_35-noPF =  0.0000 +/- 0.010000 C L(0 - 0
 root -l -b
 .L macro/plot_data_mc.C+
 PlotMeanHist("test/dato/fitres/histos_ptRatio_pt2Sum_random_scaleStep0_Et_35_noPF.root")
+.q
 mv test/dato/./img/histos_ptRatio_pt2Sum_random_scaleStep0_Et_35*.png ~/scratch1/www/RUN2_ECAL_Calibration/tmp/
 
 #Rilancia Test_job con initParameters
