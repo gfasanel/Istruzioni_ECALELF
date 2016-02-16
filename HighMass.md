@@ -43,7 +43,7 @@ E modifichi il dat file con i valori di inizializzazione che piu' ti soddisfano
 
 ####Rilancia Test_job con initParameters
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
-invMass_SC_pho_regrCorr Test_job --initFile=init_Parameters/highMass_RUN2.dat 
+ invMass_SC_pho_regrCorr Test_job --initFile=init_Parameters/highMass_RUN2.dat 
 
 (e controlla che ora la likelihood trovi un bel minimo)
 
