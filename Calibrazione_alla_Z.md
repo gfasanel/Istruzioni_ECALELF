@@ -1,8 +1,8 @@
 ##Calibrazione al RUN2
 
 **Step 0: Farsi le ntuple**
-https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_ECALELF.md
-https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Sottomissione_ntuple.sh
+https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_production/Ntuple_ECALELF.md
+https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_production/Sottomissione_ntuple.sh
 
 **0 (per essere veloce). Solo le 8 categorie eta*r9**
 
