@@ -36,7 +36,7 @@ mv test/dato/./img/histos_ptRatio_pt2Sum_random_scaleStep0_Et_35*.png ~/scratch1
 
 ##If you need initParameters
 mv test/dato/img/outProfile_ptRatio_pt2Sum_random_scaleStep0_Et_35_noPF-FitResult-.config\
-> init_Parameters/highMass_RUN2.dat
+init_Parameters/highMass_RUN2.dat
 
 E modifichi il dat file con i valori di inizializzazione che piu' ti soddisfano
 
