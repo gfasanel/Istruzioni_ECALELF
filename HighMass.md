@@ -12,6 +12,8 @@ Parti da un file bare con dati e MC
 ./script/hadder.sh
 root -l tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C
 data->Draw("invMass_SC_pho_regrCorr","smearerCat[0]>0")
+# In questo caso smearerCat[0] ==0 (EBEB), 1 (EBEE), 2 (EEEE)
+# smearerCat[1] serve solo a dire se ele1 ed ele2 sono swappati
 #######################
 
 #########Prima di lanciare 50 jobs, controlla che il minimo della likelihood sia ben preso
