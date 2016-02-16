@@ -39,7 +39,3 @@ rm test/dato/nome_file/tab/tab/step1/table/step1*
 ./script/energyScale.sh --step=1 -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
 ./script/energyScale.sh --step=1stability -f data/validation/Rereco_December2015.dat --invMass_var=invMass_SC_corr --runRangesFile=data/runRanges/data/runRanges/Rereco_December2015_interval_100000.dat
 ```
-
-
-
-step1_2.md va mergiato con questo
