@@ -7,7 +7,8 @@ Parti da un file bare con dati e MC
  data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr CatOnly
 
 #######################Controlla da categorizzazione
-./bin/ZFitter.exe -f data/validation/February2016_76_Rereco_HighMass.dat --regionsFile=data/regions/scaleStep0.dat\
+./bin/ZFitter.exe -f data/validation/February2016_76_Rereco_HighMass.dat\
+ --regionsFile=data/regions/scaleStep0.dat\
  --saveRootMacro --invMass_var=invMass_SC_pho_regrCorr
 ./script/hadder.sh
 root -l tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C
