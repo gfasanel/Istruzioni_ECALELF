@@ -1,5 +1,12 @@
 Parti da un file bare con dati e MC
 ```
+# Apri screen e lancia (not fully implemented)
+./script/HighMass_steps_maker.sh\
+ data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr
+ 
+ ```
+Passo per passo, si fa cosi':
+```
 ./script/Init_HighMass_calibration_procedure.sh\
  data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr
 
