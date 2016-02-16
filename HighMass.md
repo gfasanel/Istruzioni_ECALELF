@@ -51,8 +51,11 @@ E modifichi il dat file con i valori di inizializzazione che piu' ti soddisfano
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
  invMass_SC_pho_regrCorr jobs --initFile=init_Parameters/highMass_RUN2.dat 
  
- ####Likelihood plots
+ ####Likelihood plots, data_MC e dat file
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
  invMass_SC_pho_regrCorr finalize_plots
-
+ 
+ ####Slides (not yet implemented)
+./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
+ invMass_SC_pho_regrCorr slide
 ```
