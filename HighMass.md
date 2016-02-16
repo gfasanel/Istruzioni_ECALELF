@@ -1,10 +1,10 @@
 Ti scrivi il tuo file con dati e MC
 ```
 ./script/Init_HighMass_calibration_procedure.sh\
-> data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr
+ data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr
 
 ./script/calibration_highMass.sh\
-> data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr CatOnly
+ data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr CatOnly
 
 #######################Controlla da categorizzazione
 ./bin/ZFitter.exe -f data/validation/miniAOD_November2015.dat --regionsFile=data/regions/scaleStep0.dat\
@@ -17,7 +17,7 @@ data->Draw("invMass_SC_pho_regrCorr","smearerCat[0]>0")
 #########Prima di lanciare 50 jobs, controlla che il minimo della likelihood sia ben preso
 ##Test_job
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
->invMass_SC_pho_regrCorr Test_job
+ invMass_SC_pho_regrCorr Test_job
 
 ##Fit Test_job
 #####scala ristretta
