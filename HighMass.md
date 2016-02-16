@@ -1,4 +1,4 @@
-Ti scrivi il tuo file con dati e MC
+Parti da un file bare con dati e MC
 ```
 ./script/Init_HighMass_calibration_procedure.sh\
  data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr
@@ -17,30 +17,20 @@ data->Draw("invMass_SC_pho_regrCorr","smearerCat[0]>0")
 #########Prima di lanciare 50 jobs, controlla che il minimo della likelihood sia ben preso
 ##Test_job
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
- invMass_SC_pho_regrCorr Test_job
+ invMass_SC_pho_regrCorr Test_job 
+ # troverai i fit e il data/MC in HighMass/temp
 
-##Fit Test_job
-#####scala ristretta
-./script/fit.sh test/dato/fitres/outProfile_ptRatio_pt2Sum_random_scaleStep0_Et_35_noPF.root
-mv test/dato/img/outProfile_ptRatio_pt2Sum_random_scaleStep0_Et_35_noPF*.png ~/scratch1/www/RUN2_ECAL_Calibration/tmp/
-#####scala ampia
+#####scala ampia (puoi farla con il mio metodo)
 root -l -b
 .L macro/fitOneProfile.C
 fitOneProfile("test/dato/fitres/outProfile_ptRatio_pt2Sum_random_scaleStep0_Et_35_noPF.root","~/scratch1/www/RUN2_ECAL_Calibration/tmp/")
 .q
-#Data MC plots
-root -l -b
-.L macro/plot_data_mc.C+
-PlotMeanHist("test/dato/fitres/histos_ptRatio_pt2Sum_random_scaleStep0_Et_35_noPF.root")
-.q
-mv test/dato/./img/histos_ptRatio_pt2Sum_random_scaleStep0_Et_35*.png ~/scratch1/www/RUN2_ECAL_Calibration/tmp/
 
 ##If you need initParameters
 mv test/dato/img/outProfile_ptRatio_pt2Sum_random_scaleStep0_Et_35_noPF-FitResult-.config\
 init_Parameters/highMass_RUN2.dat
 
 E modifichi il dat file con i valori di inizializzazione che piu' ti soddisfano
-
 
 ####Rilancia Test_job con initParameters
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
