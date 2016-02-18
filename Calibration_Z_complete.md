@@ -5,7 +5,8 @@ https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_produ
 https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_production/Sottomissione_ntuple.sh
 
 **Init**
-!!Assicurati che il branch di massa sia specificato SIA in bin/ZFitter.cpp SIA in src/ZFit_class.cc!!
+
+!!Assicurati che il branch di massa sia specificato SIA in bin/ZFitter.cpp SIA in src/ZFit_class.cc altrimenti gli istogrammi dei fit o delle likelihood sono vuoti!!
 Parti da un .dat file con dati e MC, qualcosa cosi'
 ```
 #nota i tab!!
@@ -49,7 +50,8 @@ Se, ad esempio qualche variabile e' vuota/strana vuol dire che functions.sh -> m
  data/validation/December2015_Rereco_C_D_withPho.dat 100000 invMass_SC_pho_regrCorr
 ```
 
-*****Vediamo ora in dettaglio cosa fanno i vari step***************
+*****Vediamo ora in dettaglio cosa fanno i vari step********
+
 **Step1**
 
 runRange * eta (fa sia step1 che step1 stability)
