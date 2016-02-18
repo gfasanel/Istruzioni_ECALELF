@@ -16,7 +16,8 @@ s1      selected    root:://eoscms//eos/cms/store/group/dpg_ecal/alca_ecalcalib/
 nIISpring15MiniAODv2-Asym25ns-miniAOD-withPho/allRange/merged.root
 ```
 ```
-./script/Init_calibration_procedure.sh data/validation/my_test.dat 100000 invMass_SC_corr
+./script/Init_calibration_procedure.sh\
+ data/validation/my_test.dat 100000 invMass_SC_corr
 
 #Si fanno queste cose
 1-Aggiungi il branch r9
@@ -27,7 +28,8 @@ nIISpring15MiniAODv2-Asym25ns-miniAOD-withPho/allRange/merged.root
 ```
 * Controlla che il branch aggiunto r9 sia sensato
 ```
- ./bin/ZFitter.exe -f data/validation/my_test.dat --addBranch=R9Eleprime --saveRootMacro --regionsFile=data/regions/scaleStep0.dat 
+ ./bin/ZFitter.exe -f data/validation/my_test.dat\
+  --addBranch=R9Eleprime --saveRootMacro --regionsFile=data/regions/scaleStep0.dat 
 ./script/hadder.sh
 root -l tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C
 data->Draw("R9Eleprime[0]")
@@ -43,8 +45,11 @@ Se, ad esempio qualche variabile e' vuota/strana vuol dire che functions.sh -> m
 
 **Apri screen e fagli fare gli step in cascata**
 ```
-./script/steps_maker.sh data/validation/December2015_Rereco_C_D_withPho.dat 100000 invMass_SC_pho_regrCorr
+./script/steps_maker.sh\
+ data/validation/December2015_Rereco_C_D_withPho.dat 100000 invMass_SC_pho_regrCorr
 ```
+
+*****Vediamo ora in dettaglio cosa fanno i vari step***************
 **Step1**
 
 runRange * eta (fa sia step1 che step1 stability)
