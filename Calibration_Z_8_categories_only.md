@@ -1,6 +1,6 @@
 ```
 FILE=data/validation/0T_February2016_data_76_photonlikeID.dat
-INTERVAL=200000
+INTERVAL=100000
 ./script/Init_calibration_procedure.sh ${FILE} ${INTERVAL} #r9eleprime, pileupHist and trees
 
 ./script/calibration_8_categories.sh\
