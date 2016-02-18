@@ -4,12 +4,6 @@
 https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_production/Ntuple_ECALELF.md
 https://github.com/GiuseppeFasanella/Istruzioni_ECALELF/blob/master/Ntuple_production/Sottomissione_ntuple.sh
 
-**0 (per essere veloce). Solo le 8 categorie eta*r9**
-
-L'organizzazione e': concetti (do this), definizione delle macro (do this == xxx) e caller
-script/step2_only_caller.sh che chiama script/calibration_8_categories.sh.
-Le funzioni sono definite in script/bash_functions_calibration_step2.sh
-
 **Init**
 !!Assicurati che il branch di massa sia specificato SIA in bin/ZFitter.cpp SIA in src/ZFit_class.cc!!
 Parti da un .dat file con dati e MC, qualcosa cosi'
