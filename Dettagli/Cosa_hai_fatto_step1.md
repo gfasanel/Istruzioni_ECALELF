@@ -31,4 +31,37 @@ xVar=runNumber
         --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y peak --allRegions
 ```
 
+```
+    xVar=runNumber
+    if [ ! -d ${outDirData}/step1/img/stability/before_run_corr/$xVar ];then
+        mkdir -p ${outDirData}/step1/img/stability/before_run_corr/$xVar
+    fi
+
+    ./script/stability.sh -t  ${outDirTable}/step1-${invMass_var}-${selection}-${commonCut}-HggRunEta.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/before_run_corr/$xVar/ -x $xVar -y peak || exit 1
+    ./script/stability.sh -t  ${outDirTable}/step1-${invMass_var}-${selection}-${commonCut}-HggRunEta.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/before_run_corr/$xVar/ -x $xVar -y scaledWidth || exit 1
+    ./script/stability.sh -t  ${outDirTable}/step1-${invMass_var}-${selection}-${commonCut}-HggRunEta.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/before_run_corr/$xVar/ -x $xVar -y peak --allRegions || exit 1
+    ./script/stability.sh -t  ${outDirTable}/step1-${invMass_var}-${selection}-${commonCut}-HggRunEta.tex \
+	--outDirImgData ${outDirData}/step1/img/stability/before_run_corr/$xVar/ -x $xVar -y scaledWidth --allRegions || exit 1
+
+echo "Initial scale vs run plots in ${outDirData}/step1/img/stability/before_run_corr/$xVar/"
+
+##What you have after corr, i.e. now, at the end of step1stability                                                                                                              
+    xVar=runNumber
+    if [ ! -d ${outDirData}/step1/img/stability/$xVar ];then
+        mkdir -p ${outDirData}/step1/img/stability/$xVar
+    fi
+
+    ./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y peak || exit 1
+    ./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y scaledWidth || exit 1
+    ./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y peak --allRegions || exit 1
+    ./script/stability.sh -t  ${outDirTable}/step1_stability-${invMass_var}-${selection}.tex \
+        --outDirImgData ${outDirData}/step1/img/stability/$xVar/ -x $xVar -y scaledWidth --allRegions || exit 1
+
+```
 
