@@ -4,6 +4,8 @@ script/step2_only_caller.sh che chiama script/calibration_8_categories.sh.
 Le funzioni sono definite in script/bash_functions_calibration.sh
 ```
 
+* Specifica la regione in script/calibration_8_categories.sh
+
 ```
 FILE=data/validation/0T_February2016_data_76_photonlikeID.dat
 INTERVAL=100000
