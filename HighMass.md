@@ -6,6 +6,11 @@ Parti da un file bare con dati e MC
  
  ```
 Passo per passo, si fa cosi':
+
+```
+file=
+```
+
 ```
 ./script/Init_HighMass_calibration_procedure.sh\
  data/validation/February2016_76_Rereco_HighMass.dat invMass_SC_pho_regrCorr
@@ -27,7 +32,7 @@ data->Draw("invMass_SC_pho_regrCorr","smearerCat[0]>0")
 #########Prima di lanciare 50 jobs, controlla che il minimo della likelihood sia ben preso
 ##Test_job
 ./script/calibration_highMass.sh data/validation/February2016_76_Rereco_HighMass.dat\
- invMass_SC_pho_regrCorr Test_job &> debug.txt
+ invMass_SC_pho_regrCorr Test_job Zcorr_0T Zcorr_0T&> debug.txt
  # troverai i fit e il data/MC in HighMass/temp
 
 #####scala ampia (puoi farla con il mio metodo)
