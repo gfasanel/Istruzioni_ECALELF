@@ -31,7 +31,8 @@ data->Draw("invMass_SC_pho_regrCorr","smearerCat[0]>0")
 
 #########Prima di lanciare 50 jobs, controlla che il minimo della likelihood sia ben preso
 ##Test_job
-./script/calibration_highMass.sh data/validation/0T_February2016_data_76_photonlikeID.dat invMass_SC_pho_regrCorr Test_job --selection=diphotonIso25nsRun2Boff Zcorr_0T Zcorr_0T
+./script/calibration_highMass.sh data/validation/0T_February2016_data_76_photonlikeID.dat\
+ invMass_SC_pho_regrCorr Test_job --selection=diphotonIso25nsRun2Boff Zcorr_0T Zcorr_0T
  
  # troverai i fit e il data/MC in HighMass/temp
 
