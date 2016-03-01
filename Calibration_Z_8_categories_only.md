@@ -20,3 +20,6 @@ INTERVAL=100000
  ${FILE} invMass_SC_pho_regrCorr Test_job --selection=diphotonIso25nsRun2Boff
  
  ```
+### Closure test in Et
+
+* Specifica la regione in script/calibration_8_categories.sh
