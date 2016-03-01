@@ -22,4 +22,13 @@ INTERVAL=100000
  ```
 ### Closure test in Et
 
-* Specifica la regione in script/calibration_8_categories.sh
+Apri script/calibration_8_categories.sh e specifica le regioni e i commonCuts
+scaleStep0_et
+scaleStep0_et_2
+Et_20-noPF 
+
+./script/Corrections_maker.sh data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Zcorr_76 Zcorr_76
+
+./script/calibration_8_categories.sh data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr CatOnly
+
+./script/calibration_8_categories.sh data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Closure_Et
