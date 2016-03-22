@@ -36,9 +36,9 @@ Et_20-noPF
  data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr CatOnly
 #Controlla lo scarto nelle correzioni in funzione dei bin di Et
 ./script/calibration_8_categories.sh\
-data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Closure_Et
+ data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Closure_Et
 ./script/calibration_8_categories.sh\
-data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Closure_Et_stoc
+ data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Closure_Et_stoc
 
 ./script/Closure_et_wrapper.sh
 ```
