@@ -29,9 +29,11 @@ Et_20-noPF
 
 ```
 #Carica le correzioni che hai
-./script/Corrections_maker.sh data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Zcorr_76 Zcorr_76
+./script/Corrections_maker.sh\
+ data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Zcorr_76 Zcorr_76
 #Categorizza nelle regioni di Et
-./script/calibration_8_categories.sh data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr CatOnly
+./script/calibration_8_categories.sh\
+ data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr CatOnly
 #Controlla lo scarto nelle correzioni in funzione dei bin di Et
 ./script/calibration_8_categories.sh data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Closure_Et
 
