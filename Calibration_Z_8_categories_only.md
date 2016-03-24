@@ -31,6 +31,9 @@ Et_20-noPF
 #Carica le correzioni che hai
 ./script/Corrections_maker.sh\
  data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Zcorr_76 Zcorr_76
+ 
+ ./script/Corrections_maker.sh\
+ data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr no_scale_corr Zcorr_76_stoc
 #Categorizza nelle regioni di Et
 ./script/calibration_8_categories.sh\
  data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr CatOnly
