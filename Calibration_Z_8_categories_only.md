@@ -44,15 +44,17 @@ Et_20-noPF
  data/validation/February2016_Rereco_76.dat invMass_SC_pho_regrCorr Closure_Et_stoc
 
 
-./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-${region1}-${CommonCuts}.root EE-Et_0_50-Et_20-noPF
+./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-${region1}-${CommonCuts}.root\
+ EE-Et_0_50-Et_20-noPF
 
-./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF.root EE-Et_85_120-Et_20-noPF scale
+./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF.root\                     EE-Et_85_120-Et_20-noPF scale
 
-./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF.root EE-Et_85_120-Et_20-noPF scale 3 5
+./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF.root\                     EE-Et_85_120-Et_20-noPF scale 3 5
 
 
-./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF.root All scale
-mv test/dato/img/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF-*.png ~/scratch1/www/RUN2_ECAL_Calibration/February2016_Rereco_76_invMass_SC_pho_regrCorr/temp_stoc/
+./script/fit.sh test/dato/fitres/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF.root\
+ All scale
+mv test/dato/img/stochastic_smearing_applied/outProfile-scaleStep0_et_2-Et_20-noPF-*.png\                                    ~/scratch1/www/RUN2_ECAL_Calibration/February2016_Rereco_76_invMass_SC_pho_regrCorr/temp_stoc/
 
 ./script/Closure_et_wrapper.sh
 ```
