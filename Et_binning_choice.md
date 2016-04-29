@@ -5,3 +5,13 @@ rm tmp/*.root
 ./script/hadder.sh
 root -l -b tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C ~/rootlogon.C
 ```
+
+```
+root -l -b tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C ~/rootlogon.C
+.x macro/Cat_histos.C
+```
+
+```
+python macro/quantile.py
+```
+
