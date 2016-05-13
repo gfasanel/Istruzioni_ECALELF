@@ -5,6 +5,9 @@ rm tmp/*.root
 ./script/hadder.sh
 root -l -b tmp/d_chain.root tmp/s_chain.root macro/load_dataMC.C ~/rootlogon.C
 #data->MakeClass(Looper);
+.L Loop_friend.C++
+dumpTreeTotxt()
+
 ```
 
 ```
