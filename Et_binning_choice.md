@@ -13,7 +13,7 @@ python macro/quantile.py
 ```
 root
 .L Loop_friend.C++
-Ht_study(double Ht_cut)
+Ht_study(double Ht_min, double Ht_max)
 ```
 
 
