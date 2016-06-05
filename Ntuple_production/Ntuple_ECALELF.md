@@ -60,7 +60,7 @@ RerecoGlobalTag = cms.ESSource("PoolDBESSource",
 
 ```
 #dentro lo script specifica il file, il tag e il json
-./script/local_run.sh data (MC) 
+./script/local_run_test.sh (commenta/scommenta cio' che ti serve)
 ```
 ```
 ##Esempi a manina (quello che fa local_run.sh)
