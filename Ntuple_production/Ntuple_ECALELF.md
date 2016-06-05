@@ -87,6 +87,7 @@ cmsRun python/alcaSkimming.py type=MINIAODNTUPLE files=file:$file maxEvents=1000
 
 ```
 source ../initCmsEnvCRAB2.sh
+./submit.sh data (mc ) aprilo prima per cancellare quello che ti serve
 ```
  
 * 1) Devi scrivere in alcareco_datasets.dat il dataset sul quale vuoi girare
