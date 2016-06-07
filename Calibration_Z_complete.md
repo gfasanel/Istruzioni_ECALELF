@@ -44,6 +44,8 @@ signalA->Draw("R9Eleprime[0]")
 ```
 Se, ad esempio qualche variabile e' vuota/strana vuol dire che functions.sh -> mcName, ad esempio, si sta confondendo con i tab --> provvedi!
 
+*Apri script/steps_maker.sh e controlla i file di categorizzazione e i commonCut che stai applicando
+
 **Apri screen e fagli fare gli step in cascata**
 ```
 ./script/steps_maker.sh\
