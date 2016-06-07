@@ -52,6 +52,8 @@ Se, ad esempio qualche variabile e' vuota/strana vuol dire che functions.sh -> m
  data/validation/December2015_Rereco_C_D_withPho.dat 100000 invMass_SC_pho_regrCorr
 ```
 
+Se qualcosa fallisce, ad esempio in step2, ho definito degli scenarii (ad esempio puoi voler solo categorizzare, o solo mandare un job di prova per vedere se hai bisogno di un initFile)
+
 *****Vediamo ora in dettaglio cosa fanno i vari step********
 
 **Step1**
